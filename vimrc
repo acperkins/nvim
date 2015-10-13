@@ -1,6 +1,6 @@
 set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
+silent! execute pathogen#infect()
 
 filetype plugin indent on
 set autoindent
@@ -27,6 +27,10 @@ if has("gui_running")
     set columns=88
     set lines=40
 
-    colorscheme solarized
+    try
+        colorscheme solarized
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme darkblue
+    endtry
 
 endif
