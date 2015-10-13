@@ -1,6 +1,8 @@
+set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+filetype plugin indent on
 set autoindent
 set directory=.,$TEMP
 set expandtab
