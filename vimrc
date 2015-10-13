@@ -8,6 +8,7 @@ set directory=.,$TEMP
 set expandtab
 set linebreak
 set number
+set omnifunc=syntaxcomplete#Complete
 set printoptions=paper:A4,duplex:off,header:0
 set ruler
 set shiftwidth=4
