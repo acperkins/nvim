@@ -4,6 +4,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 set autoindent
+set background=dark
 set directory=.,$TEMP
 set expandtab
 set linebreak
@@ -23,7 +24,6 @@ if has("gui_running")
         set guifont=Consolas:h10:cANSI
     endif
 
-    set background=dark
     set columns=88
     set lines=40
 
