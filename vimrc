@@ -2,6 +2,7 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
+colorscheme desert
 filetype plugin indent on
 set autoindent
 set background=dark
