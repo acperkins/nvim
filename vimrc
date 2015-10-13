@@ -14,6 +14,7 @@ set omnifunc=syntaxcomplete#Complete
 set printoptions=paper:A4,duplex:off,header:0
 set ruler
 set shiftwidth=4
+set spl=en_gb spell
 set tabstop=4
 set wrap
 syntax on
