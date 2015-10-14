@@ -1,9 +1,7 @@
 set nocompatible
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
-colorscheme desert
-filetype plugin indent on
 set autoindent
 set background=dark
 set directory=.,$TEMP
@@ -17,7 +15,9 @@ set shiftwidth=4
 set spl=en_gb spell
 set tabstop=4
 set wrap
-syntax on
+silent! colorscheme desert
+silent! filetype plugin indent on
+silent! syntax on
 
 if has("gui_running")
     if has("gui_gtk2")
