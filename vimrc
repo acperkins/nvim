@@ -14,6 +14,7 @@ set ruler
 set shiftwidth=4
 set spl=en_gb spell
 set tabstop=4
+set textwidth=72
 set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
