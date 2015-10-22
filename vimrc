@@ -41,7 +41,7 @@ if has("gui_running")
     set lines=40
 
     try
-        colorscheme solarized
+        colorscheme jellybeans
     catch /^Vim\%((\a\+)\)\=:E185/
         colorscheme darkblue
     endtry
