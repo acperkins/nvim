@@ -18,6 +18,7 @@ set linebreak
 set list
 set listchars="tab:> ,trail:$,extends:>,precedes:<,nbsp:+"
 set modelines=0
+set nospell
 set number
 set omnifunc=syntaxcomplete#Complete
 set printoptions=paper:A4,duplex:off,header:0
