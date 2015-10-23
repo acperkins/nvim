@@ -10,7 +10,7 @@ set background=dark
 set colorcolumn=72
 set cursorcolumn
 set cursorline
-set directory=.,$TEMP
+set directory=$TEMP//,/tmp//,.
 set encoding=utf-8
 set expandtab
 set ignorecase
