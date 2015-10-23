@@ -13,6 +13,7 @@ set cursorline
 set directory=$TEMP//,/tmp//,.
 set encoding=utf-8
 set expandtab
+set foldmethod=syntax
 set ignorecase
 set linebreak
 set list
