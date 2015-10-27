@@ -17,7 +17,6 @@ set foldmethod=syntax
 set ignorecase
 set linebreak
 set list
-set listchars="tab:> ,trail:$,extends:>,precedes:<,nbsp:+"
 set modelines=0
 set number
 set omnifunc=syntaxcomplete#Complete
