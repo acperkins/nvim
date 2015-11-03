@@ -13,7 +13,6 @@ set cursorline
 set directory=$TEMP//,/tmp//,.
 set encoding=utf-8
 set expandtab
-set foldmethod=syntax
 set ignorecase
 set linebreak
 set list
@@ -32,6 +31,7 @@ set ttyfast
 set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
+silent! set foldmethod=syntax
 silent! syntax on
 
 if has("gui_running")
