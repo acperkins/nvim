@@ -7,7 +7,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 nmap <silent> <A-Up> :wincmd k<CR>
 set autoindent
 set background=dark
-set colorcolumn=72
+set colorcolumn=73
 set cursorcolumn
 set cursorline
 set directory=$TEMP//,/tmp//,.
@@ -26,7 +26,7 @@ set shiftwidth=4
 set smartcase
 set spl=en_gb nospell
 set tabstop=4
-set textwidth=73
+set textwidth=72
 set ttyfast
 set wrap
 silent! colorscheme desert
