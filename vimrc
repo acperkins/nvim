@@ -26,7 +26,7 @@ set shiftwidth=4
 set smartcase
 set spl=en_gb nospell
 set tabstop=4
-set textwidth=72
+set textwidth=73
 set ttyfast
 set wrap
 silent! colorscheme desert
