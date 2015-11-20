@@ -1,10 +1,18 @@
 silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
+inoremap <up>    <nop>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 nmap <silent> <A-Up> :wincmd k<CR>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+nnoremap <up>    <nop>
 set autoindent
 set background=dark
 set colorcolumn=73
