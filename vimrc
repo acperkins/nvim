@@ -40,7 +40,6 @@ set ttyfast
 set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
-silent! set foldmethod=syntax
 silent! syntax on
 
 if has("gui_running")
