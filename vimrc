@@ -21,7 +21,7 @@ set cursorline
 set directory=$TEMP//,/tmp//,.
 set encoding=utf-8
 set expandtab
-set guioptions=c
+set guioptions=cr
 set ignorecase
 set linebreak
 set list
