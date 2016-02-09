@@ -44,9 +44,9 @@ silent! syntax on
 
 if has("gui_running")
     if has("gui_gtk2")
-        set guifont=Monospace\ 10
+        set guifont=Monoid\ 9
     elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
+        set guifont=Monoid:h9:cANSI
     endif
 
     set columns=88
