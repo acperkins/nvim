@@ -1,6 +1,7 @@
 silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
