@@ -40,3 +40,9 @@
 [submodule "bundle/rust.vim"]
 	path = bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "bundle/mom.vim"]
+	path = bundle/mom.vim
+	url = https://github.com/vim-scripts/mom.vim.git
+[submodule "bundle/TextFormat"]
+	path = bundle/TextFormat
+	url = https://github.com/vim-scripts/TextFormat.git

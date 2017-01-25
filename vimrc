@@ -2,6 +2,9 @@ silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufWritePost *.mom !pdfmom -t -k <afile> > <afile>.pdf
+autocmd BufWritePost *.rst !rst2html <afile> <afile>.html
+autocmd BufWritePost *.tex !lualatex --output-directory=/tmp <afile>
 command Q q
 command W w
 command WQ wq
@@ -36,17 +39,18 @@ set ignorecase
 set linebreak
 set list
 set modelines=0
+set nojoinspaces
 set number
 set omnifunc=syntaxcomplete#Complete
 set printoptions=paper:A4,duplex:off,header:0
 set relativenumber
-set ruler
 set shiftwidth=4
 set smartcase
 set spl=en_gb nospell
 set tabstop=4
 set textwidth=72
 set ttyfast
+set viminfo="NONE"
 set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
@@ -54,9 +58,9 @@ silent! syntax on
 
 if has("gui_running")
     if has("gui_gtk2")
-        set guifont=Monoid\ 9
+        set guifont=Monospace\ Regular\ 10
     elseif has("gui_win32")
-        set guifont=Monoid:h9:cANSI
+        set guifont=Consolas:h10:cANSI
     endif
 
     set columns=88
