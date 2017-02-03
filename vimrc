@@ -38,6 +38,7 @@ set guioptions=cr
 set ignorecase
 set linebreak
 set list
+set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
 set modelines=0
 set nojoinspaces
 set number
