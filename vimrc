@@ -38,7 +38,6 @@ set guioptions=cr
 set ignorecase
 set linebreak
 set list
-set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
 set modelines=0
 set nojoinspaces
 set number
@@ -56,6 +55,12 @@ set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
 silent! syntax on
+
+if has("patch-7.4.710")
+    set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
+else
+    set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
+endif
 
 if has("gui_running")
     if has("gui_gtk2")
