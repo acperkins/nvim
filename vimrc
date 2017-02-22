@@ -2,9 +2,6 @@ silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! execute pathogen#infect()
 
 autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufWritePost *.mom !pdfmom -t -k <afile> > <afile>.pdf
-autocmd BufWritePost *.rst !rst2html -i utf-8 <afile> <afile>.html
-autocmd BufWritePost *.tex !lualatex --output-directory=/tmp <afile>
 command Q q
 command W w
 command WQ wq
