@@ -46,3 +46,9 @@
 [submodule "bundle/TextFormat"]
 	path = bundle/TextFormat
 	url = https://github.com/vim-scripts/TextFormat.git
+[submodule "bundle/riv.vim"]
+	path = bundle/riv.vim
+	url = https://github.com/Rykka/riv.vim.git
+[submodule "bundle/InstantRst"]
+	path = bundle/InstantRst
+	url = https://github.com/Rykka/InstantRst.git
