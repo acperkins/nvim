@@ -15,6 +15,7 @@ let g:netrw_browse_split = 4
 let g:netrw_liststyle = 3
 let g:netrw_sort_sequence = '[\/]$,*'
 let g:netrw_winsize = -28
+let g:riv_fold_auto_update=0
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
@@ -36,6 +37,7 @@ set ignorecase
 set linebreak
 set list
 set modelines=0
+set nofoldenable
 set nojoinspaces
 set number
 set omnifunc=syntaxcomplete#Complete
