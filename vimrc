@@ -1,5 +1,7 @@
-silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
-silent! execute pathogen#infect()
+if version < 800
+    silent! runtime pack/acp/start/vim-pathogen/autoload/pathogen.vim
+    silent! execute pathogen#infect('pack/acp/start/{}')
+endif
 
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 command Q q
