@@ -1,5 +1,5 @@
 if version < 800
-    silent! runtime pack/acp/start/vim-pathogen/autoload/pathogen.vim
+    silent! runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
     silent! execute pathogen#infect('pack/acp/start/{}')
 endif
 
