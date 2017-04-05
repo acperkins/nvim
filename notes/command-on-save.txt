@@ -1,5 +1,0 @@
-To run "command" on the current file on each save, use:
-
-    :autocmd BufWritePost * !command <afile>
-
-<afile> is a built-in variable for the current active file.
