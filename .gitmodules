@@ -25,3 +25,6 @@
 [submodule "bundle/TextFormat"]
 	path = bundle/TextFormat
 	url = https://github.com/vim-scripts/TextFormat.git
+[submodule "bundle/vim-orgmode"]
+	path = bundle/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
