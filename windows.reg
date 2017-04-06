@@ -1,0 +1,48 @@
+Windows Registry Editor Version 5.00
+
+;=======================================================================
+; Add "Edit with Vim" to all file types.
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\gvim-rw]
+@="Edit with Vim"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\gvim-rw\command]
+; Maps to "\"%LOCALAPPDATA%\\vim\\vim80\\gvim.exe" \"%1\""
+@=hex(2):22,00,25,00,4c,00,4f,00,43,00,41,00,4c,00,41,00,50,00,50,00,44,00,41,\
+  00,54,00,41,00,25,00,5c,00,76,00,69,00,6d,00,5c,00,76,00,69,00,6d,00,38,00,\
+  30,00,5c,00,67,00,76,00,69,00,6d,00,2e,00,65,00,78,00,65,00,22,00,20,00,22,\
+  00,25,00,31,00,22,00,00,00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\gvim-ro]
+@="View with Vim"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\gvim-ro\command]
+; Maps to "\"%LOCALAPPDATA%\\vim\\vim80\\gvim.exe" -R \"%1\""
+@=hex(2):22,00,25,00,4c,00,4f,00,43,00,41,00,4c,00,41,00,50,00,50,00,44,00,41,\
+  00,54,00,41,00,25,00,5c,00,76,00,69,00,6d,00,5c,00,76,00,69,00,6d,00,38,00,\
+  30,00,5c,00,67,00,76,00,69,00,6d,00,2e,00,65,00,78,00,65,00,22,00,20,00,2d,\
+  00,52,00,20,00,22,00,25,00,31,00,22,00,00,00
+
+;=======================================================================
+; Define "Vim" file type to open with gVim
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Vim\DefaultIcon]
+@="%SystemRoot%\\System32\\imageres.dll,97"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Vim\shell\open]
+@="Open"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Vim\shell\open\command]
+; Maps to "\"%LOCALAPPDATA%\\vim\\vim80\\gvim.exe" \"%1\""
+@=hex(2):22,00,25,00,4c,00,4f,00,43,00,41,00,4c,00,41,00,50,00,50,00,44,00,41,\
+  00,54,00,41,00,25,00,5c,00,76,00,69,00,6d,00,5c,00,76,00,69,00,6d,00,38,00,\
+  30,00,5c,00,67,00,76,00,69,00,6d,00,2e,00,65,00,78,00,65,00,22,00,20,00,2d,\
+  00,52,00,20,00,22,00,25,00,31,00,22,00,00,00
+
+;=======================================================================
+; Vim file
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.vim]
+@="Vim"
+"Content Type"="text/x-vim"
+"PerceivedType"="text"
