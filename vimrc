@@ -90,6 +90,10 @@ else
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
 endif
 
+if has("lua")
+    let g:neocomplete#enable_at_startup=1
+endif
+
 if !empty(&viminfo)
     set viminfo^=!
 endif
