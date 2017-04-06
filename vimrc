@@ -1,3 +1,10 @@
+" Anthony Perkins
+" https://github.com/acperkins/vimfiles
+" Distributed under the VIM license. See ':help license' for a copy.
+"
+" Includes parts from Tim Pope's «sensible.vim»
+" <https://github.com/tpope/vim-sensible>.
+
 if version < 800
     silent! runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
     silent! execute pathogen#infect('pack/acp/start/{}')
@@ -27,40 +34,68 @@ nnoremap <left>  <nop>
 nnoremap <right> <nop>
 nnoremap <up>    <nop>
 set autoindent
+set autoread
 set background=dark
+set backspace=indent,eol,start
 set colorcolumn=73
+set complete-=i
 set cursorcolumn
 set cursorline
 set directory=$TEMP//,/tmp//,.
+set display+=lastline
 set encoding=utf-8
 set expandtab
-set guioptions=cr
+set guioptions+=c
+set guioptions-=m
+set guioptions-=T
+set history=1000
 set ignorecase
+set incsearch
+set laststatus=2
 set linebreak
 set list
 set modelines=0
 set nofoldenable
 set nojoinspaces
+set nrformats-=octal
 set number
 set omnifunc=syntaxcomplete#Complete
 set printoptions=paper:A4,duplex:off,header:0
 set relativenumber
+set ruler
+set sessionoptions-=options
 set shiftwidth=4
 set smartcase
+set smarttab
 set spl=en_gb nospell
 set tabstop=4
 set textwidth=72
+set ttimeout
+set ttimeoutlen=100
 set ttyfast
 set viminfo="NONE"
+set wildmenu
 set wrap
 silent! colorscheme desert
 silent! filetype plugin indent on
 silent! syntax on
 
+if has("patch-7.3.541")
+    set formatoptions+=j
+endif
+
 if has("patch-7.4.710")
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
 else
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
+endif
+
+if !empty(&viminfo)
+    set viminfo^=!
+endif
+
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+    set t_Co=16
 endif
 
 if has("gui_running")
@@ -80,3 +115,5 @@ if has("gui_running")
     endtry
 
 endif
+
+" vim:set ft=vim et sw=4:
