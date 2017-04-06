@@ -9,5 +9,4 @@ Git submodules are slow, so handle this manually.
 * [start/TextFormat](https://github.com/vim-scripts/TextFormat)
 * [start/vim-airline](https://github.com/bling/vim-airline)
 * [start/vim-ps1](https://github.com/PProvost/vim-ps1)
-* [start/vim-sensible](https://github.com/tpope/vim-sensible)
 * [start/vim-surround](https://github.com/tpope/vim-surround)
