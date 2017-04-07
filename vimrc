@@ -96,10 +96,6 @@ if has("lua")
     let g:neocomplete#enable_at_startup=1
 endif
 
-if !empty(&viminfo)
-    set viminfo^=!
-endif
-
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
