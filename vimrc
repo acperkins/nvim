@@ -10,24 +10,10 @@ if version < 800
     silent! execute pathogen#infect('pack/acp/start/{}')
 endif
 
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-command Q q
-command W w
-command WQ wq
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
-let g:airline_theme='jellybeans'
-let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_map='<c-p>'
-let g:netrw_altv=1
-let g:netrw_banner=0
-let g:netrw_browse_split=4
-let g:netrw_liststyle=3
-let g:netrw_sort_sequence='[\/]$,*'
-let g:netrw_winsize=-28
-let g:riv_fold_auto_update=0
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
@@ -58,7 +44,7 @@ set laststatus=2
 set linebreak
 set list
 set modelines=0
-set nofoldenable
+set nocompatible
 set nojoinspaces
 set nrformats-=octal
 set number
@@ -79,9 +65,25 @@ set ttyfast
 set viminfo="NONE"
 set wildmenu
 set wrap
-silent! colorscheme desert
-silent! filetype plugin indent on
-silent! syntax on
+
+if has("eval")
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+    command Q q
+    command W w
+    command WQ wq
+    filetype plugin indent on
+    let g:airline_theme='jellybeans'
+    let g:ctrlp_cmd='CtrlP'
+    let g:ctrlp_map='<c-p>'
+    let g:netrw_altv=1
+    let g:netrw_banner=0
+    let g:netrw_browse_split=4
+    let g:netrw_liststyle=3
+    let g:netrw_sort_sequence='[\/]$,*'
+    let g:netrw_winsize=-28
+    let g:riv_fold_auto_update=0
+    syntax on
+endif
 
 if has("patch-7.3.541")
     set formatoptions+=j
@@ -95,6 +97,10 @@ endif
 
 if has("lua")
     let g:neocomplete#enable_at_startup=1
+endif
+
+if has("folding")
+    set nofoldenable
 endif
 
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
