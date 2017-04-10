@@ -5,14 +5,14 @@
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
 
-" ======================================================================
+" =====================================================================
 " Load Pathogen if Vim does not support packages.
 if !has("packages")
     runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
     execute pathogen#infect('pack/acp/start/{}')
 endif
 
-" ======================================================================
+" =====================================================================
 " General settings for all builds.
 
 inoremap <down>  <nop>
@@ -68,7 +68,7 @@ set viminfo="NONE"
 set wildmenu
 set wrap
 
-" ======================================================================
+" =====================================================================
 " General settings for non-minimal Vim builds.
 
 if has("eval")
@@ -96,7 +96,7 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
 
-" ======================================================================
+" =====================================================================
 " Settings based on feature detection.
 
 if has("autocmd")
@@ -144,6 +144,6 @@ if has("syntax")
     syntax on
 endif
 
-" ======================================================================
+" =====================================================================
 " End of config file.
 " vim:set ft=vim et sw=4:
