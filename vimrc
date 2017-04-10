@@ -45,6 +45,7 @@ set incsearch
 set laststatus=2
 set linebreak
 set list
+set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
 set modelines=0
 set nocompatible
 set nojoinspaces
@@ -132,8 +133,6 @@ endif
 
 if has("patch-7.4.710")
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
-else
-    set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
 endif
 
 if has("smartindent")
