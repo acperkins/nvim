@@ -5,10 +5,15 @@
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
 
-if !has("packages") && has("eval")
+" ======================================================================
+" Load Pathogen if Vim does not support packages.
+if !has("packages")
     runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
     execute pathogen#infect('pack/acp/start/{}')
 endif
+
+" ======================================================================
+" General settings for all builds.
 
 inoremap <down>  <nop>
 inoremap <left>  <nop>
@@ -63,7 +68,13 @@ set viminfo="NONE"
 set wildmenu
 set wrap
 
+" ======================================================================
+" General settings for non-minimal Vim builds.
+
 if has("eval")
+    " Protect commands that are only available when +eval is enabled.
+    " Technically only "if 1" would be required, as "has()" is provided
+    " by +eval, but this is clearer.
     colorscheme jellybeans
     command Q q
     command W w
@@ -84,6 +95,9 @@ endif
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
+
+" ======================================================================
+" Settings based on feature detection.
 
 if has("autocmd")
     autocmd BufRead,BufNewFile *.md set filetype=markdown
@@ -130,4 +144,6 @@ if has("syntax")
     syntax on
 endif
 
+" ======================================================================
+" End of config file.
 " vim:set ft=vim et sw=4:
