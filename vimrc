@@ -81,7 +81,6 @@ if has("eval")
     command W w
     command WQ wq
     filetype plugin indent on
-    let g:airline_theme='jellybeans'
     let g:ctrlp_cmd='CtrlP'
     let g:ctrlp_map='<c-p>'
     let g:netrw_altv=1
@@ -90,7 +89,6 @@ if has("eval")
     let g:netrw_liststyle=3
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
-    let g:riv_fold_auto_update=0
 endif
 
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
