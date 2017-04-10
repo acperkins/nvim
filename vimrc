@@ -118,7 +118,6 @@ if has("gui_running")
     endif
     set columns=88
     set lines=40
-
 endif
 
 " vim:set ft=vim et sw=4:
