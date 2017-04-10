@@ -132,7 +132,7 @@ if has("patch-7.3.541")
 endif
 
 if has("patch-7.4.710")
-    set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<,space:·
+    set listchars+=space:·
 endif
 
 if has("smartindent")
