@@ -5,9 +5,9 @@
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
 
-if version < 800
-    silent! runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
-    silent! execute pathogen#infect('pack/acp/start/{}')
+if version < 800 && has("eval")
+    runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
+    execute pathogen#infect('pack/acp/start/{}')
 endif
 
 inoremap <down>  <nop>
@@ -68,6 +68,7 @@ set wrap
 
 if has("eval")
     autocmd BufRead,BufNewFile *.md set filetype=markdown
+    colorscheme jellybeans
     command Q q
     command W w
     command WQ wq
@@ -85,6 +86,18 @@ if has("eval")
     syntax on
 endif
 
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+    set t_Co=16
+endif
+
+if has("folding")
+    set nofoldenable
+endif
+
+if has("lua")
+    let g:neocomplete#enable_at_startup=1
+endif
+
 if has("patch-7.3.541")
     set formatoptions+=j
 endif
@@ -95,18 +108,6 @@ else
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
 endif
 
-if has("lua")
-    let g:neocomplete#enable_at_startup=1
-endif
-
-if has("folding")
-    set nofoldenable
-endif
-
-if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
-    set t_Co=16
-endif
-
 if has("gui_running")
     if has("gui_gtk2")
         set guifont=Monospace\ Regular\ 10
@@ -115,15 +116,8 @@ if has("gui_running")
         set guifont=Consolas:h10:cANSI
         set clipboard=unnamed
     endif
-
     set columns=88
     set lines=40
-
-    try
-        colorscheme jellybeans
-    catch /^Vim\%((\a\+)\)\=:E185/
-        colorscheme darkblue
-    endtry
 
 endif
 
