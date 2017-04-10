@@ -5,7 +5,7 @@
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
 
-if version < 800 && has("eval")
+if !has("packages") && has("eval")
     runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
     execute pathogen#infect('pack/acp/start/{}')
 endif
@@ -14,10 +14,10 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Down>  :wincmd j<CR>
+nmap <silent> <A-Left>  :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
-nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Up>    :wincmd k<CR>
 nnoremap <down>  <nop>
 nnoremap <left>  <nop>
 nnoremap <right> <nop>
@@ -34,9 +34,6 @@ set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
 set expandtab
-set guioptions+=c
-set guioptions-=m
-set guioptions-=T
 set history=1000
 set ignorecase
 set incsearch
@@ -67,7 +64,6 @@ set wildmenu
 set wrap
 
 if has("eval")
-    autocmd BufRead,BufNewFile *.md set filetype=markdown
     colorscheme jellybeans
     command Q q
     command W w
@@ -83,15 +79,33 @@ if has("eval")
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
     let g:riv_fold_auto_update=0
-    syntax on
 endif
 
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
     set t_Co=16
 endif
 
+if has("autocmd")
+    autocmd BufRead,BufNewFile *.md set filetype=markdown
+endif
+
 if has("folding")
     set nofoldenable
+endif
+
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Monospace\ Regular\ 10
+        set clipboard=unnamedplus
+    elseif has("gui_win32")
+        set guifont=Consolas:h10:cANSI
+        set clipboard=unnamed
+    endif
+    set columns=88
+    set guioptions+=c
+    set guioptions-=m
+    set guioptions-=T
+    set lines=40
 endif
 
 if has("lua")
@@ -108,16 +122,12 @@ else
     set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
 endif
 
-if has("gui_running")
-    if has("gui_gtk2")
-        set guifont=Monospace\ Regular\ 10
-        set clipboard=unnamedplus
-    elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
-        set clipboard=unnamed
-    endif
-    set columns=88
-    set lines=40
+if has("smartindent")
+    set smartindent
+endif
+
+if has("syntax")
+    syntax on
 endif
 
 " vim:set ft=vim et sw=4:
