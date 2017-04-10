@@ -18,6 +18,7 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
+let g:airline_theme='jellybeans'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_map='<c-p>'
 let g:netrw_altv=1
