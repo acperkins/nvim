@@ -81,8 +81,6 @@ if has("eval")
     command W w
     command WQ wq
     filetype plugin indent on
-    let g:ctrlp_cmd='CtrlP'
-    let g:ctrlp_map='<c-p>'
     let g:netrw_altv=1
     let g:netrw_banner=0
     let g:netrw_browse_split=4
@@ -119,10 +117,6 @@ if has("gui_running")
     set guioptions-=m
     set guioptions-=T
     set lines=40
-endif
-
-if has("lua")
-    let g:neocomplete#enable_at_startup=1
 endif
 
 if has("patch-7.3.541")
