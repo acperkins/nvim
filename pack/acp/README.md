@@ -3,7 +3,6 @@
 Git submodules are slow, so handle this manually.
 
 * [opt/vim-pathogen](https://github.com/tpope/vim-pathogen)
-* [start/TextFormat](https://github.com/vim-scripts/TextFormat)
 * [start/jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
 * [start/mom.vim](https://github.com/vim-scripts/mom.vim)
 * [start/rust.vim](https://github.com/rust-lang/rust.vim)
