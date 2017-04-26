@@ -106,11 +106,12 @@ endif
 
 if has("gui_running")
     if has("gui_gtk2")
-        set guifont=Monospace\ Regular\ 10
         set clipboard=unnamedplus
+        set guifont=Monospace\ Regular\ 10
     elseif has("gui_win32")
-        set guifont=Consolas:h10:cANSI
         set clipboard=unnamed
+        set guifont=Source_Code_Pro:h9:cANSI:qDRAFT,
+                    \Consolas:h10:cANSI
     endif
     set columns=88
     set guioptions+=c
