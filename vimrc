@@ -52,7 +52,6 @@ set nojoinspaces
 set nrformats-=octal
 set number
 set omnifunc=syntaxcomplete#Complete
-set printoptions=paper:A4,duplex:off,header:0
 set relativenumber
 set ruler
 set sessionoptions-=options
@@ -126,6 +125,11 @@ endif
 
 if has("patch-7.4.710")
     set listchars+=space:·
+endif
+
+if has("printer")
+    set printheader=%t%h%m%=Page\ %N
+    set printoptions=paper:A4,number:y,syntax:n
 endif
 
 if has("smartindent")
