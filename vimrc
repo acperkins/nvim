@@ -87,8 +87,12 @@ if has("eval")
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
     " Use 256-color mode unless at the Linux console or in Eterm.
-    if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
-        set t_Co=256
+    if &t_Co == 8
+        if $TERM !~# '^linux\|^Eterm'
+            set t_Co=256
+        else
+            set t_Co=16
+        endif
     endif
 endif
 
