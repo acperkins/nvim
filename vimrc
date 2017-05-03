@@ -97,6 +97,7 @@ endif
 
 if has("autocmd")
     autocmd BufRead,BufNewFile *.md set filetype=markdown
+    autocmd BufRead,BufNewFile *.xml set shiftwidth=2
 endif
 
 if has("folding")
