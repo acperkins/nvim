@@ -109,9 +109,10 @@ if has("folding")
 endif
 
 if has("gui_running")
-    if has("gui_gtk2")
+    if has("gui_gtk2") || has("gui_gtk3")
         set clipboard=unnamedplus
-        set guifont=Monospace\ Regular\ 10
+        set guifont=Source\ Code\ Pro\ 11,
+                    \Monospace\ Regular\ 10
     elseif has("gui_win32")
         set clipboard=unnamed
         set guifont=Source_Code_Pro:h9:cANSI:qDRAFT,
