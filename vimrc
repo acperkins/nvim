@@ -101,6 +101,8 @@ endif
 
 if has("autocmd")
     autocmd BufRead,BufNewFile *.go set noexpandtab
+    autocmd BufRead,BufNewFile *.go set shiftwidth=8
+    autocmd BufRead,BufNewFile *.go set tabstop=8
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.md set shiftwidth=2
