@@ -100,6 +100,7 @@ endif
 " Settings based on feature detection.
 
 if has("autocmd")
+    autocmd BufRead,BufNewFile *.go set noexpandtab
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.md set shiftwidth=2
