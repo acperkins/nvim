@@ -117,8 +117,8 @@ endif
 if has("gui_running")
     if has("gui_gtk2") || has("gui_gtk3")
         set clipboard=unnamedplus
-        set guifont=Source\ Code\ Pro\ 10,
-                    \Monospace\ Regular\ 10
+        set guifont=Liberation\ Mono\ 9,
+                    \Monospace\ Regular\ 9
     elseif has("gui_win32")
         set clipboard=unnamed
         set guifont=Source_Code_Pro:h9:cANSI:qDRAFT,
