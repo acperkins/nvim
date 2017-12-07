@@ -31,7 +31,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=73
+set colorcolumn=80
 set complete-=i
 set cursorcolumn
 set cursorline
@@ -60,7 +60,6 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=4
-set textwidth=72
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
