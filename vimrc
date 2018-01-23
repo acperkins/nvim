@@ -46,7 +46,8 @@ set laststatus=2
 set linebreak
 set list
 set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
-set modelines=0
+set modeline
+set modelines=1
 set nocompatible
 set nojoinspaces
 set nrformats-=octal
