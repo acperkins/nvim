@@ -31,7 +31,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=80
+set colorcolumn=73,81
 set complete-=i
 set cursorcolumn
 set cursorline
@@ -60,7 +60,7 @@ set shiftwidth=4
 set smartcase
 set smarttab
 set spl=en_gb nospell
-set tabstop=4
+set tabstop=8
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
@@ -108,6 +108,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.md set shiftwidth=2
+    autocmd BufRead,BufNewFile *.md set tabstop=4
     autocmd BufRead,BufNewFile *.xml set shiftwidth=2
     autocmd BufRead,BufNewFile *.yml set shiftwidth=2
 endif
