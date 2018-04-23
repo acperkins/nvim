@@ -107,7 +107,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.go set tabstop=8
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown
-    autocmd BufRead,BufNewFile *.md set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set tabstop=4
     autocmd BufRead,BufNewFile *.xml set shiftwidth=2
     autocmd BufRead,BufNewFile *.yml set shiftwidth=2
