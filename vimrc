@@ -86,6 +86,8 @@ if has("eval")
     let g:netrw_liststyle=3
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
+    " Disable vim-go warning on CentOS
+    let g:go_version_warning = 0
     " Set colour levels for different terminals.
     if &term == "rxvt-unicode"
         set t_Co=256
