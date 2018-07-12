@@ -131,7 +131,7 @@ if has("gui_running")
     endif
     set columns=88
     set guioptions+=c
-    set guioptions-=m
+    set guioptions+=m
     set guioptions-=T
     set lines=40
 endif
