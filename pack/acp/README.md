@@ -3,6 +3,7 @@
 Git submodules are slow, so handle this manually.
 
 * [opt/vim-pathogen](https://github.com/tpope/vim-pathogen)
+* [opt/gruvbox](https://github.com/morhetz/gruvbox)
 * [start/jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
 * [start/minimalist](https://github.com/dikiaap/minimalist)
 * [start/mom.vim](https://github.com/vim-scripts/mom.vim)
