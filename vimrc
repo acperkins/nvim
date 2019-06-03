@@ -33,8 +33,6 @@ set background=dark
 set backspace=indent,eol,start
 set colorcolumn=73,81
 set complete-=i
-set cursorcolumn
-set cursorline
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -45,7 +43,7 @@ set incsearch
 set laststatus=2
 set linebreak
 set list
-set listchars=eol:¶,tab:→ ,trail:~,extends:>,precedes:<
+set listchars=eol:¶,tab:→·,trail:~,extends:>,precedes:<
 set modeline
 set modelines=1
 set nocompatible
@@ -139,10 +137,6 @@ endif
 
 if has("patch-7.3.541")
     set formatoptions+=j
-endif
-
-if has("patch-7.4.710")
-    set listchars+=space:·
 endif
 
 if has("printer")
