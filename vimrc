@@ -73,7 +73,7 @@ if has("eval")
     " Protect commands that are only available when +eval is enabled.
     " Technically only "if 1" would be required, as "has()" is provided
     " by +eval, but this is clearer.
-    colorscheme jellybeans
+    colorscheme minimalist
     command Q q
     command W w
     command WQ wq
