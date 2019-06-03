@@ -65,7 +65,7 @@ endif
 
 let colors_name = "jellybeans"
 
-if has("gui_running") || (has('termguicolors') && &termguicolors) || &t_Co >= 88
+if has("gui_running") || &t_Co == 88 || &t_Co == 256
   let s:low_color = 0
 else
   let s:low_color = 1
@@ -274,7 +274,7 @@ endfun
 fun! s:color(r, g, b)
   " map greys directly (see xterm's 256colres.pl)
   if &t_Co == 256 && a:r == a:g && a:g == a:b && a:r > 3 && a:r < 243
-    return (a:r - 8) / 10 + 232
+    return float2nr(round(a:r - 8) / 10.0) + 232
   endif
 
   " get the closest grey
