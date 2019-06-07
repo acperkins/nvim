@@ -40,6 +40,7 @@ set expandtab
 set history=1000
 set ignorecase
 set incsearch
+set joinspaces
 set laststatus=2
 set linebreak
 set list
@@ -47,7 +48,6 @@ set listchars=tab:→·,trail:~,extends:>,precedes:<
 set modeline
 set modelines=1
 set nocompatible
-set nojoinspaces
 set nrformats-=octal
 set number
 set numberwidth=8
