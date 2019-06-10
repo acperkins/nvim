@@ -6,6 +6,7 @@ Git submodules are slow, so handle this manually.
 * [start/goyo.vim](https://github.com/junegunn/goyo.vim)
 * [start/gruvbox](https://github.com/morhetz/gruvbox)
 * [start/jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
+* [start/limelight.vim](https://github.com/junegunn/limelight.vim)
 * [start/minimalist](https://github.com/dikiaap/minimalist)
 * [start/mom.vim](https://github.com/vim-scripts/mom.vim)
 * [start/rust.vim](https://github.com/rust-lang/rust.vim)
