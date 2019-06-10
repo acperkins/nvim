@@ -19,6 +19,8 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
+nmap <F7> :setlocal spell! spelllang=en_gb<CR>
+nmap <F11> :Goyo<CR>
 nmap <silent> <A-Down>  :wincmd j<CR>
 nmap <silent> <A-Left>  :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
