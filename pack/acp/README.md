@@ -11,5 +11,7 @@ Git submodules are slow, so handle this manually.
 * [start/mom.vim](https://github.com/vim-scripts/mom.vim)
 * [start/rust.vim](https://github.com/rust-lang/rust.vim)
 * [start/vim-go](https://github.com/fatih/vim-go)
+* [start/vim-orgmode](https://github.com/jceb/vim-orgmode)
 * [start/vim-ps1](https://github.com/PProvost/vim-ps1)
+* [start/vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [start/vim-surround](https://github.com/tpope/vim-surround)
