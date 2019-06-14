@@ -62,6 +62,7 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=8
+set textwidth=72
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
