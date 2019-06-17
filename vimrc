@@ -124,7 +124,7 @@ if has("folding")
 endif
 
 if has("gui_running")
-    if has("gui_gtk2") || has("gui_gtk3")
+    if has("gui_gtk")
         set clipboard=unnamedplus
         set guifont=Liberation\ Mono\ 11,
                     \Monospace\ Regular\ 11
