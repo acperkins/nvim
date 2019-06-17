@@ -134,8 +134,7 @@ if has("gui_running")
                     \Consolas:h10:cANSI
     endif
     set columns=88
-    set guioptions+=c
-    set guioptions+=m
+    set guioptions+=cm
     set guioptions-=T
     set lines=40
 endif
