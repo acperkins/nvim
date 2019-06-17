@@ -1,5 +1,5 @@
 " Anthony Perkins
-" https://github.com/acperkins/vimfiles
+" https://git.acperkins.com/acp/vimfiles
 " Distributed under the VIM license. See ':help license' for a copy.
 "
 " Includes parts from Tim Pope's «sensible.vim»
