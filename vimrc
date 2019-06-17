@@ -111,7 +111,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown tabstop=4
     autocmd BufRead,BufNewFile *.opml set shiftwidth=2
-    autocmd BufRead,BufNewFile *.org set shiftwidth=2
     autocmd BufRead,BufNewFile *.xml set shiftwidth=2
     autocmd BufRead,BufNewFile *.yml set shiftwidth=2
 endif
