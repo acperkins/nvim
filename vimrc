@@ -6,6 +6,10 @@
 " <https://github.com/tpope/vim-sensible>.
 
 " ======================================================================
+" Set this first to avoid overwriting later settings.
+set nocompatible
+
+" ======================================================================
 " Load Pathogen if Vim does not support packages.
 if !has("packages")
     runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
@@ -49,7 +53,6 @@ set linebreak
 set list
 set listchars=tab:→·,trail:~,extends:>,precedes:<
 set modelines=0
-set nocompatible
 set nomodeline
 set nrformats-=octal
 set number
