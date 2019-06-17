@@ -47,9 +47,9 @@ set laststatus=2
 set linebreak
 set list
 set listchars=tab:→·,trail:~,extends:>,precedes:<
-set modeline
-set modelines=1
+set modelines=0
 set nocompatible
+set nomodeline
 set nrformats-=octal
 set number
 set numberwidth=8
