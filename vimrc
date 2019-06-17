@@ -39,6 +39,7 @@ set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
 set expandtab
+set formatoptions-=t
 set history=1000
 set ignorecase
 set incsearch
