@@ -24,6 +24,7 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
 nmap <F7> :setlocal spell! spelllang=en_gb<CR>
+nmap <F10> :put =strftime('%FT%T%z')<CR>
 nmap <F11> :Goyo<bar>:Limelight!!<CR>
 nnoremap <down>  <nop>
 nnoremap <left>  <nop>
