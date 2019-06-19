@@ -20,3 +20,4 @@ Git submodules are slow, so handle this manually.
 * [vim-ps1](https://github.com/PProvost/vim-ps1)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
+* [vimoutliner](https://github.com/vimoutliner/vimoutliner)
