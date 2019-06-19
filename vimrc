@@ -20,6 +20,8 @@ endif
 " ======================================================================
 " General settings for all builds.
 
+nmap <space> <leader>
+
 inoremap <left>  <nop>
 inoremap <down>  <nop>
 inoremap <up>    <nop>
