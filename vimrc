@@ -95,12 +95,12 @@ if has("eval")
     " Disable vim-go warning on CentOS
     let g:go_version_warning = 0
     " Set colour levels for different terminals.
-    if &term == "rxvt-unicode"
+    if &term == "xterm-256color"
         set t_Co=256
     elseif &term == "xterm"
         set t_Co=256
-    elseif &term == "linux"
-        set t_Co=16
+    elseif &term == "rxvt-unicode"
+        set t_Co=256
     else
         set t_Co=16
     endif
