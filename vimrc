@@ -66,7 +66,7 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=8
-set textwidth=72
+set textwidth=78
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
@@ -92,7 +92,7 @@ if has("eval")
     let g:netrw_liststyle=3
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
-    let g:org_tag_column=72
+    let g:org_tag_column=78
     let g:go_version_warning=0
     " Set colour levels for different terminals.
     if &term == "xterm-256color"
