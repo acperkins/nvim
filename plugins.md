@@ -2,16 +2,21 @@
 
 Git submodules are slow, so handle this manually.
 
-* [opt/vim-pathogen](https://github.com/tpope/vim-pathogen)
-* [start/goyo.vim](https://github.com/junegunn/goyo.vim)
-* [start/gruvbox](https://github.com/morhetz/gruvbox)
-* [start/jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
-* [start/limelight.vim](https://github.com/junegunn/limelight.vim)
-* [start/minimalist](https://github.com/dikiaap/minimalist)
-* [start/mom.vim](https://github.com/vim-scripts/mom.vim)
-* [start/rust.vim](https://github.com/rust-lang/rust.vim)
-* [start/vim-go](https://github.com/fatih/vim-go)
-* [start/vim-orgmode](https://github.com/jceb/vim-orgmode)
-* [start/vim-ps1](https://github.com/PProvost/vim-ps1)
-* [start/vim-speeddating](https://github.com/tpope/vim-speeddating)
-* [start/vim-surround](https://github.com/tpope/vim-surround)
+## pack/acp/opt/
+
+* [vim-pathogen](https://github.com/tpope/vim-pathogen)
+
+## pack/acp/start/
+
+* [goyo.vim](https://github.com/junegunn/goyo.vim)
+* [gruvbox](https://github.com/morhetz/gruvbox)
+* [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
+* [limelight.vim](https://github.com/junegunn/limelight.vim)
+* [minimalist](https://github.com/dikiaap/minimalist)
+* [mom.vim](https://github.com/vim-scripts/mom.vim)
+* [rust.vim](https://github.com/rust-lang/rust.vim)
+* [vim-go](https://github.com/fatih/vim-go)
+* [vim-orgmode](https://github.com/jceb/vim-orgmode)
+* [vim-ps1](https://github.com/PProvost/vim-ps1)
+* [vim-speeddating](https://github.com/tpope/vim-speeddating)
+* [vim-surround](https://github.com/tpope/vim-surround)
