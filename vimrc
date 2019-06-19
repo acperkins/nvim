@@ -37,7 +37,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=73,81
+set colorcolumn=79
 set complete-=i
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
