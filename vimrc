@@ -19,17 +19,19 @@ endif
 " ======================================================================
 " General settings for all builds.
 
-inoremap <down>  <nop>
 inoremap <left>  <nop>
-inoremap <right> <nop>
+inoremap <down>  <nop>
 inoremap <up>    <nop>
-nnoremap <down>  <nop>
+inoremap <right> <nop>
 nnoremap <left>  <nop>
-nnoremap <right> <nop>
+nnoremap <down>  <nop>
 nnoremap <up>    <nop>
+nnoremap <right> <nop>
+
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <F10> :put =strftime('%FT%T%z')<CR>
 nnoremap <F11> :Goyo<bar>:Limelight!!<CR>
+
 set autoindent
 set autoread
 set background=dark
