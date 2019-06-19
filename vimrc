@@ -92,8 +92,7 @@ if has("eval")
     let g:netrw_sort_sequence='[\/]$,*'
     let g:netrw_winsize=-28
     let g:org_tag_column=72
-    " Disable vim-go warning on CentOS
-    let g:go_version_warning = 0
+    let g:go_version_warning=0
     " Set colour levels for different terminals.
     if &term == "xterm-256color"
         set t_Co=256
