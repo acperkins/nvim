@@ -55,7 +55,6 @@ set listchars=tab:→·,trail:~,extends:>,precedes:<
 set modelines=0
 set nomodeline
 set nrformats-=octal
-set number
 set numberwidth=8
 set omnifunc=syntaxcomplete#Complete
 set relativenumber
