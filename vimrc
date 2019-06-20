@@ -87,6 +87,7 @@ if has("eval")
     command W w
     command WQ wq
     filetype plugin indent on
+    let g:go_version_warning=0
     let g:netrw_altv=1
     let g:netrw_banner=0
     let g:netrw_browse_split=4
@@ -95,7 +96,6 @@ if has("eval")
     let g:netrw_winsize=-28
     let g:org_indent=0
     let g:org_tag_column=78
-    let g:go_version_warning=0
     " Set colour levels for different terminals.
     if &term == "xterm-256color"
         set t_Co=256
