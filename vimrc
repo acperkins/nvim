@@ -34,6 +34,8 @@ nnoremap <right> <nop>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <F10> :put =strftime('%FT%T%z')<CR>
 nnoremap <F11> :Goyo<bar>:Limelight!!<CR>
+nnoremap gB :bprevious<CR>
+nnoremap gb :bnext<CR>
 
 set autoindent
 set autoread
