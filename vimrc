@@ -84,7 +84,6 @@ if has("eval")
     " Protect commands that are only available when +eval is enabled.
     " Technically only "if 1" would be required, as "has()" is provided
     " by +eval, but this is clearer.
-    colorscheme gruvbox
     command Q q
     command W w
     command WQ wq
@@ -108,6 +107,7 @@ if has("eval")
     else
         set t_Co=16
     endif
+    colorscheme PaperColor
 endif
 
 " ======================================================================
@@ -137,6 +137,7 @@ if has("gui_running")
         set guifont=Source_Code_Pro:h9:cANSI:qDRAFT,
                     \Consolas:h10:cANSI
     endif
+    set background=light
     set columns=88
     set guioptions+=cm
     set guioptions-=T
