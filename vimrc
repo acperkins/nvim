@@ -46,7 +46,6 @@ set complete-=i
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
-set expandtab
 set formatoptions-=t
 set history=1000
 set ignorecase
@@ -57,6 +56,7 @@ set linebreak
 set list
 set listchars=tab:→·,trail:~,extends:>,precedes:<
 set modelines=0
+set noexpandtab
 set nomodeline
 set nrformats-=octal
 set numberwidth=8
@@ -64,11 +64,10 @@ set omnifunc=syntaxcomplete#Complete
 set relativenumber
 set ruler
 set sessionoptions-=options
-set shiftwidth=4
 set smartcase
 set smarttab
 set spl=en_gb nospell
-set tabstop=8
+set tabstop=4
 set textwidth=78
 set ttimeout
 set ttimeoutlen=100
@@ -114,7 +113,7 @@ endif
 " Settings based on feature detection.
 
 if has("autocmd")
-    autocmd BufRead,BufNewFile *.go set noexpandtab shiftwidth=8 tabstop=8
+    autocmd BufRead,BufNewFile *.go set shiftwidth=8 tabstop=8
     autocmd BufRead,BufNewFile *.html set shiftwidth=2
     autocmd BufRead,BufNewFile *.md set filetype=markdown tabstop=4
     autocmd BufRead,BufNewFile *.opml set shiftwidth=2
@@ -163,4 +162,4 @@ endif
 
 " ======================================================================
 " End of config file.
-" vim:set ft=vim et sw=4:
+" vim:set ft=vim:
