@@ -67,7 +67,7 @@ set sessionoptions-=options
 set smartcase
 set smarttab
 set spl=en_gb nospell
-set tabstop=4
+set tabstop=8
 set textwidth=78
 set ttimeout
 set ttimeoutlen=100
