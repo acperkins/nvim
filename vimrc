@@ -72,8 +72,6 @@ set textwidth=78
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
-set viminfo="NONE"
-set wildmenu
 set wrap
 
 " ======================================================================
@@ -158,6 +156,14 @@ endif
 
 if has("syntax")
 	syntax on
+endif
+
+if has("viminfo")
+	set viminfo="NONE"
+endif
+
+if has("wildmenu")
+	set wildmenu
 endif
 
 " ======================================================================
