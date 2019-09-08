@@ -1,23 +1,24 @@
 " Anthony Perkins
 " https://git.acperkins.com/acp/vimfiles
+"
 " Distributed under the VIM license.  See ':help license' for a copy.
 " Files under pack/ have their own licenses.
 "
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
 
-" ======================================================================
+"=============================================================================
 " Set this first to avoid overwriting later settings.
 set nocompatible
 
-" ======================================================================
+"=============================================================================
 " Load Pathogen if Vim does not support packages.
 if !has("packages")
 	runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
 	execute pathogen#infect('pack/acp/start/{}')
 endif
 
-" ======================================================================
+"=============================================================================
 " General settings for all builds.
 
 nmap <space> <leader>
@@ -74,7 +75,7 @@ set ttimeoutlen=100
 set ttyfast
 set wrap
 
-" ======================================================================
+"=============================================================================
 " General settings for non-minimal Vim builds.
 
 if has("eval")
@@ -107,7 +108,7 @@ if has("eval")
 	colorscheme PaperColor
 endif
 
-" ======================================================================
+"=============================================================================
 " Settings based on feature detection.
 
 if has("autocmd")
@@ -166,6 +167,6 @@ if has("wildmenu")
 	set wildmenu
 endif
 
-" ======================================================================
+"=============================================================================
 " End of config file.
 " vim:set ft=vim:
