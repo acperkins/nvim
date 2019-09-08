@@ -112,12 +112,12 @@ endif
 " Settings based on feature detection.
 
 if has("autocmd")
-	autocmd BufRead,BufNewFile *.go set noexpandtab shiftwidth=8 tabstop=8
-	autocmd BufRead,BufNewFile *.html set expandtab shiftwidth=2
-	autocmd BufRead,BufNewFile *.md set filetype=markdown shiftwidth=4
-	autocmd BufRead,BufNewFile *.opml set expandtab shiftwidth=2
-	autocmd BufRead,BufNewFile *.xml set expandtab shiftwidth=2
-	autocmd BufRead,BufNewFile *.yml set expandtab shiftwidth=2
+	autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
+	autocmd BufRead,BufNewFile *.html set et sw=2
+	autocmd BufRead,BufNewFile *.md set ft=markdown sw=4
+	autocmd BufRead,BufNewFile *.opml set et sw=2
+	autocmd BufRead,BufNewFile *.xml set et sw=2
+	autocmd BufRead,BufNewFile *.yml set et sw=2
 endif
 
 if has("folding")
