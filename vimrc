@@ -127,13 +127,10 @@ endif
 if has("gui_running")
 	if has("gui_gtk")
 		set clipboard=unnamedplus
-		set guifont=Iosevka\ Term\ Light\ 11,
-		            \Liberation\ Mono\ 11,
-		            \Monospace\ Regular\ 11
+		set guifont=Monospace\ 11
 	elseif has("gui_win32")
 		set clipboard=unnamed
-		set guifont=Source_Code_Pro:h9:cANSI:qDRAFT,
-		            \Consolas:h10:cANSI
+		set guifont=Consolas:h10:cANSI
 	endif
 	set background=light
 	set columns=88
