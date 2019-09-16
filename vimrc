@@ -43,7 +43,6 @@ set autoread
 set background=dark
 set backspace=indent,eol,start
 set colorcolumn=79
-set complete-=i
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -61,7 +60,6 @@ set noexpandtab
 set nomodeline
 set nrformats-=octal
 set numberwidth=8
-set omnifunc=syntaxcomplete#Complete
 set relativenumber
 set ruler
 set sessionoptions-=options
@@ -86,6 +84,8 @@ if has("eval")
 	command W w
 	command WQ wq
 	filetype plugin indent on
+	let g:ale_completion_enabled=1
+	let g:ale_sign_column_always=1
 	let g:go_version_warning=0
 	let g:netrw_altv=1
 	let g:netrw_banner=0
