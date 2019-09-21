@@ -133,10 +133,10 @@ if has("gui_running")
 		set guifont=Consolas:h10:cANSI
 	endif
 	set background=light
-	set columns=88
+	set columns=90
 	set guioptions+=cm
 	set guioptions-=T
-	set lines=40
+	set lines=30
 endif
 
 if has("patch-7.3.541")
