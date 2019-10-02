@@ -117,6 +117,7 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.md set ft=markdown sw=4
 	autocmd BufRead,BufNewFile *.opml set et sw=2
 	autocmd BufRead,BufNewFile *.xml set et sw=2
+	autocmd BufRead,BufNewFile *.yaml set et sw=2
 	autocmd BufRead,BufNewFile *.yml set et sw=2
 endif
 
