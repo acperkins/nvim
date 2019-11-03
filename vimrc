@@ -27,6 +27,7 @@ inoremap <left>  <nop>
 inoremap <down>  <nop>
 inoremap <up>    <nop>
 inoremap <right> <nop>
+inoremap <C-BS>  <C-W>
 nnoremap <left>  <nop>
 nnoremap <down>  <nop>
 nnoremap <up>    <nop>
