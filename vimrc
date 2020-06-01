@@ -43,7 +43,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=79
+set colorcolumn=121
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -68,7 +68,7 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=8
-set textwidth=78
+set textwidth=120
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
@@ -135,10 +135,10 @@ if has("gui_running")
 		set guifont=Consolas:h10:cANSI
 	endif
 	set background=light
-	set columns=90
+	set columns=132
 	set guioptions+=cm
 	set guioptions-=T
-	set lines=30
+	set lines=43
 endif
 
 if has("patch-7.3.541")
