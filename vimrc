@@ -43,7 +43,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
-set colorcolumn=121
+set colorcolumn=101
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -68,7 +68,7 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=8
-set textwidth=120
+set textwidth=72
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
