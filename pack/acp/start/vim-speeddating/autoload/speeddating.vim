@@ -102,9 +102,9 @@ function! speeddating#increment(increment)
     endif
   endfor
   if a:increment > 0
-    exe "norm! ". a:increment."\<C-A>"
+    exe "norm ". a:increment."\<Plug>SpeedDatingFallbackUp"
   else
-    exe "norm! ".-a:increment."\<C-X>"
+    exe "norm ".-a:increment."\<Plug>SpeedDatingFallbackDown"
   endif
   silent! call repeat#set("\<Plug>SpeedDating" . (a:increment < 0 ? "Down" : "Up"),a:increment < 0 ? -a:increment : a:increment)
 endfunction
@@ -461,7 +461,7 @@ function! s:strftime(pattern,time)
 endfunction
 
 function! s:localtime(...)
-  let ts = a:0 ? a:1 : has('unix') ? reltimestr(reltime()) : localtime().'.0'
+  let ts = a:0 ? a:1 : has('unix')&&!has('nvim') ? reltimestr(reltime()) : localtime().'.0'
   let us = matchstr(ts,'\.\zs.\{0,6\}')
   let us .= repeat(0,6-strlen(us))
   let us = +matchstr(us,'[1-9].*')
