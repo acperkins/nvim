@@ -89,6 +89,8 @@ if has("eval")
 	filetype plugin indent on
 	let g:ale_completion_enabled=1
 	let g:ale_sign_column_always=1
+	let g:go_def_mode='gopls'
+	let g:go_info_mode='gopls'
 	let g:go_version_warning=0
 	let g:netrw_altv=1
 	let g:netrw_banner=0
