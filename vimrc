@@ -23,19 +23,19 @@ endif
 
 nmap <space> <leader>
 
-inoremap <left>  <nop>
-inoremap <down>  <nop>
-inoremap <up>    <nop>
-inoremap <right> <nop>
 inoremap <C-BS>  <C-W>
-nnoremap <left>  <nop>
-nnoremap <down>  <nop>
-nnoremap <up>    <nop>
-nnoremap <right> <nop>
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
+inoremap <up>    <nop>
 
-nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <F10> :put =strftime('%FT%T%z')<CR>
 nnoremap <F11> :Goyo<bar>:Limelight!!<CR>
+nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+nnoremap <up>    <nop>
 nnoremap gB :bprevious<CR>
 nnoremap gb :bnext<CR>
 
