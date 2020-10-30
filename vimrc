@@ -161,7 +161,7 @@ else
 	set signcolumn=yes
 endif
 
-if has("patch-8.1.1719") && executable("nodejs")
+if has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
 	packadd coc.nvim
 	" Use tab for trigger completion with characters ahead and navigate.
 	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
