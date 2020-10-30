@@ -24,6 +24,8 @@ endif
 nmap <space> <leader>
 
 inoremap <C-BS> <C-W>
+inoremap <C-a> <C-O>^
+inoremap <C-e> <C-O>$
 inoremap <F12> <C-\><C-O>:w<CR>
 inoremap <down> <nop>
 inoremap <left> <nop>
