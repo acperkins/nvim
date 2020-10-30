@@ -65,6 +65,7 @@ set nrformats-=octal
 set numberwidth=8
 set relativenumber
 set ruler
+set scrolloff=2
 set sessionoptions-=options
 set smartcase
 set smarttab
