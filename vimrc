@@ -45,6 +45,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
+set cmdheight=2
 set colorcolumn=101
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
@@ -67,6 +68,7 @@ set relativenumber
 set ruler
 set scrolloff=2
 set sessionoptions-=options
+set shortmess+=c
 set smartcase
 set smarttab
 set spl=en_gb nospell
@@ -75,6 +77,7 @@ set textwidth=72
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
+set updatetime=300
 set wrap
 
 "=============================================================================
@@ -113,6 +116,24 @@ if has("eval")
 		set t_Co=16
 	endif
 	colorscheme PaperColor
+
+	" Use tab for trigger completion with characters ahead and navigate.
+	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+	" other plugin before putting this into your config.
+	inoremap <silent><expr> <TAB>
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ coc#refresh()
+	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+	function! s:check_back_space() abort
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~# '\s'
+	endfunction
+
+	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+		\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 endif
 
 "=============================================================================
@@ -149,6 +170,12 @@ endif
 
 if has("patch-7.3.541")
 	set formatoptions+=j
+endif
+
+if has("patch-8.1.1564")
+	set signcolumn=number
+else
+	set signcolumn=yes
 endif
 
 if has("printer")
