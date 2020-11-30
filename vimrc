@@ -125,7 +125,7 @@ endif
 if has("autocmd")
 	autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
 	autocmd BufRead,BufNewFile *.html set et sw=2
-	autocmd BufRead,BufNewFile *.md set ft=markdown sw=4
+	autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
 	autocmd BufRead,BufNewFile *.opml set et sw=2
 	autocmd BufRead,BufNewFile *.xml set et sw=2
 	autocmd BufRead,BufNewFile *.yaml set et sw=2
