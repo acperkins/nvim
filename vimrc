@@ -146,7 +146,7 @@ if has("gui_running")
 	endif
 	set background=light
 	set columns=132
-	set guioptions+=cm
+	set guioptions+=cmf
 	set guioptions-=T
 	set lines=43
 endif
