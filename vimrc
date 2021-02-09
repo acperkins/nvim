@@ -116,7 +116,8 @@ if has("eval")
 	else
 		set t_Co=16
 	endif
-	colorscheme PaperColor
+	colorscheme joker
+	set termguicolors
 endif
 
 "=============================================================================
@@ -144,7 +145,7 @@ if has("gui_running")
 		set clipboard=unnamed
 		set guifont=Consolas:h10:cANSI
 	endif
-	set background=light
+	"set background=light
 	set columns=132
 	set guioptions+=cmf
 	set guioptions-=T
