@@ -144,6 +144,7 @@ if has("gui_running")
 	elseif has("gui_win32")
 		set clipboard=unnamed
 		set guifont=Consolas:h10:cANSI
+		set rop=type:directx
 	endif
 	"set background=light
 	set columns=132
