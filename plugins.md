@@ -4,6 +4,7 @@ Git submodules are slow, so handle this manually.
 
 ## pack/acp/opt/
 
+* [coc.nvim](https://github.com/neoclide/coc.nvim)
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
 ## pack/acp/start/
