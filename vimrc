@@ -41,12 +41,18 @@ nnoremap <up> <nop>
 nnoremap gB :bprevious<CR>
 nnoremap gb :bnext<CR>
 
+" Text wrapping and margin settings. Setting tw=72 is ideal for emails or
+" anything that will be read in a Terminal, while tw=100 is better for code or
+" for general text that will be viewed in a GUI.
+set colorcolumn=73,81,101
+set textwidth=100  " Suggestions: 72, 80, 100
+
+" All other settings.
 set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
 set cmdheight=1
-set colorcolumn=101
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -76,7 +82,6 @@ set smartcase
 set smarttab
 set spl=en_gb nospell
 set tabstop=8
-set textwidth=72
 set ttimeout
 set ttimeoutlen=100
 set ttyfast
