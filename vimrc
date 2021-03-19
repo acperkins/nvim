@@ -203,8 +203,8 @@ if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executab
 	set cmdheight=2
 
 	" Use tab for trigger completion with characters ahead and navigate.
-	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-	" other plugin before putting this into your config.
+	" NOTE: Use command ':verbose imap <tab>' to make sure tab is not
+	" mapped by other plugin before putting this into your config.
 	inoremap <silent><expr> <TAB>
 		\ pumvisible() ? "\<C-n>" :
 		\ <SID>check_back_space() ? "\<TAB>" :
@@ -223,13 +223,14 @@ if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executab
 		inoremap <silent><expr> <c-@> coc#refresh()
 	endif
 
-	" Make <CR> auto-select the first completion item and notify coc.nvim to
-	" format on enter, <cr> could be remapped by other vim plugin
+	" Make <CR> auto-select the first completion item and notify coc.nvim
+	" to format on enter, <cr> could be remapped by other vim plugin
 	inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 		\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 	" Use `[g` and `]g` to navigate diagnostics
-	" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+	" Use `:CocDiagnostics` to get all diagnostics of current buffer in
+	" location list.
 	nmap <silent> [g <Plug>(coc-diagnostic-prev)
 	nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
@@ -281,7 +282,8 @@ if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executab
 	nmap <leader>qf  <Plug>(coc-fix-current)
 
 	" Map function and class text objects
-	" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+	" NOTE: Requires 'textDocument.documentSymbol' support from the
+	" language server.
 	xmap if <Plug>(coc-funcobj-i)
 	omap if <Plug>(coc-funcobj-i)
 	xmap af <Plug>(coc-funcobj-a)
@@ -316,8 +318,8 @@ if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executab
 	command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 	" Add (Neo)Vim's native statusline support.
-	" NOTE: Please see `:h coc-status` for integrations with external plugins that
-	" provide custom statusline: lightline.vim, vim-airline.
+	" NOTE: Please see `:h coc-status` for integrations with external
+	" plugins that provide custom statusline: lightline.vim, vim-airline.
 	set statusline^=%f\ %{coc#status()}%{get(b:,'coc_current_function','')}%=%l,%c%V\ %P
 
 	" Mappings for CoCList
