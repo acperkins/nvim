@@ -43,8 +43,10 @@ nnoremap gb :bnext<CR>
 
 " Text wrapping and margin settings. Setting tw=72 is ideal for emails or
 " anything that will be read in a Terminal, while tw=100 is better for code or
-" for general text that will be viewed in a GUI.
-set colorcolumn=73,81,101
+" for general text that will be viewed in a GUI. If printing, an A4-sized
+" page should fit 100 columns at 8pt or 80 columns at 10pt, in Courier or
+" Liberation Mono fonts.
+set colorcolumn=101  " Suggestions: 73, 81, 101
 set textwidth=100  " Suggestions: 72, 80, 100
 
 " All other settings.
@@ -138,6 +140,21 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.xml set et sw=2
 	autocmd BufRead,BufNewFile *.yaml set et sw=2
 	autocmd BufRead,BufNewFile *.yml set et sw=2
+
+	" Set the colorcolumn to textwidth + 1.
+	function! s:SetColorColumn()
+		if &textwidth == 0
+			setlocal colorcolumn=81
+		else
+			setlocal colorcolumn=+1
+		endif
+	endfunction
+	augroup colorcolumn
+		autocmd!
+		autocmd OptionSet textwidth call s:SetColorColumn()
+		autocmd BufEnter * call s:SetColorColumn()
+	augroup end
+
 endif
 
 if has("folding")
