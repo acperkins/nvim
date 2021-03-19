@@ -118,7 +118,7 @@ if has("eval")
 	else
 		set t_Co=16
 	endif
-	colorscheme gruvbox
+	colorscheme PaperColor
 	set termguicolors
 endif
 
