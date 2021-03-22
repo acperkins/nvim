@@ -188,14 +188,15 @@ else
 endif
 
 if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
+	" Vim on Linux.
+	let g:coc_data_home = resolve("~/.vim/coc")
+	" Vim on Windows.
 	if has("win32")
 		let g:coc_data_home = resolve("~/vimfiles/coc")
-	else
-		if has("nvim")
-			let g:coc_data_home = resolve("~/.config/nvim/coc")
-		else
-			let g:coc_data_home = resolve("~/.vim/coc")
-		endif
+	endif
+	" NVim on Linux.
+	if has("nvim")
+		let g:coc_data_home = resolve("~/.config/nvim/coc")
 	endif
 	packadd coc.nvim
 
