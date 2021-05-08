@@ -192,7 +192,7 @@ else
 	set signcolumn=yes
 endif
 
-if !empty($VIMCOC) && has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
+if !empty($VIMCOC) && (has("patch-8.1.1719") || has("nvim")) && (executable("nodejs") || executable("node"))
 	" Vim on Linux.
 	let g:coc_data_home = resolve("~/.vim/coc")
 	" Vim on Windows.
