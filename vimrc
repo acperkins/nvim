@@ -125,7 +125,7 @@ if has("eval")
 	else
 		set t_Co=16
 	endif
-	colorscheme PaperColor
+	colorscheme gruvbox
 
 	if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux' )
 		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
