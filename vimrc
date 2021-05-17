@@ -107,6 +107,7 @@ if has("eval")
 	let g:go_def_mode='gopls'
 	let g:go_info_mode='gopls'
 	let g:go_version_warning=0
+	let g:goyo_width=100
 	let g:netrw_altv=1
 	let g:netrw_banner=0
 	let g:netrw_browse_split=4
