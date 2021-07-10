@@ -63,7 +63,6 @@ set hidden
 set history=1000
 set ignorecase
 set incsearch
-set joinspaces
 set laststatus=2
 set linebreak
 set list
@@ -71,6 +70,7 @@ set listchars=tab:→·,trail:~,extends:>,precedes:<
 set modelines=0
 set nobackup
 set noexpandtab
+set nojoinspaces
 set nomodeline
 set nowritebackup
 set nrformats-=octal
