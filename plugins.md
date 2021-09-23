@@ -10,6 +10,7 @@ Git submodules are slow, so handle this manually.
 
 * [goyo.vim](https://github.com/junegunn/goyo.vim)
 * [gruvbox](https://github.com/morhetz/gruvbox)
+* [landscape.vim](https://github.com/itchyny/landscape.vim)
 * [limelight.vim](https://github.com/junegunn/limelight.vim)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
