@@ -199,7 +199,7 @@ if has("printer")
 endif
 
 if has("smartindent")
-	set smartindent
+	set nosmartindent
 endif
 
 if has("syntax")
