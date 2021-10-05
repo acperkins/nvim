@@ -13,7 +13,7 @@ set nocompatible
 
 "=============================================================================
 " Load Pathogen if Vim does not support packages.
-if !has("packages")
+if !has('packages')
 	runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
 	execute pathogen#infect('pack/acp/start/{}')
 endif
@@ -93,9 +93,9 @@ set wrap
 "=============================================================================
 " General settings for non-minimal Vim builds.
 
-if has("eval")
+if has('eval')
 	" Protect commands that are only available when +eval is enabled.
-	" Technically only "if 1" would be required, as "has()" is provided
+	" Technically only 'if 1' would be required, as 'has()' is provided
 	" by +eval, but this is clearer.
 	command Q q
 	command W w
@@ -118,23 +118,23 @@ if has("eval")
 	let g:org_tag_column=78
 	let g:tempus_enforce_background_color=1
 	" Set colour levels for different terminals.
-	if &term == "xterm-256color"
+	if &term == 'xterm-256color'
 		set t_Co=256
-	elseif &term == "xterm"
+	elseif &term == 'xterm'
 		set t_Co=256
-	elseif &term == "rxvt-unicode"
+	elseif &term == 'rxvt-unicode'
 		set t_Co=256
 	else
 		set t_Co=16
 	endif
 	if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux' )
-		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-		let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+		let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum'
+		let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum'
 		set termguicolors
 	endif
 	"
 	" Set theme for Terminal.
-	if &term =~# '^linux'
+	if &term == 'linux'
 		" Dark for Linux console.
 		set background=dark
 		colorscheme tempus_night
@@ -148,7 +148,7 @@ endif
 "=============================================================================
 " Settings based on feature detection.
 
-if has("autocmd")
+if has('autocmd')
 	autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
 	autocmd BufRead,BufNewFile *.html set et sw=2
 	autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
@@ -173,15 +173,15 @@ if has("autocmd")
 
 endif
 
-if has("folding")
+if has('folding')
 	set nofoldenable
 endif
 
-if has("gui_running")
-	if has("gui_gtk")
+if has('gui_running')
+	if has('gui_gtk')
 		set clipboard=unnamedplus
 		set guifont=Monospace\ 10
-	elseif has("gui_win32")
+	elseif has('gui_win32')
 		set clipboard=unnamed
 		set guifont=Consolas:h10:cANSI
 		set rop=type:directx
@@ -196,34 +196,34 @@ if has("gui_running")
 	colorscheme tempus_totus
 endif
 
-if has("patch-7.3.541")
+if has('patch-7.3.541')
 	set formatoptions+=j
 endif
 
-if has("patch-8.1.1564")
+if has('patch-8.1.1564')
 	set signcolumn=number
 else
 	set signcolumn=yes
 endif
 
-if has("printer")
+if has('printer')
 	set printheader=%t%h%m%=Page\ %N
 	set printoptions=paper:A4,number:y,syntax:n
 endif
 
-if has("smartindent")
+if has('smartindent')
 	set nosmartindent
 endif
 
-if has("syntax")
+if has('syntax')
 	syntax on
 endif
 
-if has("viminfo")
+if has('viminfo')
 	set viminfo="NONE"
 endif
 
-if has("wildmenu")
+if has('wildmenu')
 	set wildmenu
 endif
 
