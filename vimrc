@@ -180,7 +180,7 @@ endif
 if has("gui_running")
 	if has("gui_gtk")
 		set clipboard=unnamedplus
-		set guifont=Monospace\ 11
+		set guifont=Monospace\ 10
 	elseif has("gui_win32")
 		set clipboard=unnamed
 		set guifont=Consolas:h10:cANSI
@@ -212,7 +212,7 @@ if has("printer")
 endif
 
 if has("smartindent")
-	set smartindent
+	set nosmartindent
 endif
 
 if has("syntax")
