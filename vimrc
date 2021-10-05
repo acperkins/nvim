@@ -116,6 +116,7 @@ if has("eval")
 	let g:netrw_winsize=-28
 	let g:org_indent=0
 	let g:org_tag_column=78
+	let g:tempus_enforce_background_color=1
 	" Set colour levels for different terminals.
 	if &term == "xterm-256color"
 		set t_Co=256
@@ -126,12 +127,21 @@ if has("eval")
 	else
 		set t_Co=16
 	endif
-	colorscheme landscape
-
 	if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux' )
 		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 		let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 		set termguicolors
+	endif
+	"
+	" Set theme for Terminal.
+	if &term =~# '^Linux'
+		" Dark for Linux console.
+		set background=dark
+		colorscheme tempus_night
+	else
+		" Light for all other consoles.
+		set background=light
+		colorscheme tempus_totus
 	endif
 endif
 
@@ -176,11 +186,14 @@ if has("gui_running")
 		set guifont=Consolas:h10:cANSI
 		set rop=type:directx
 	endif
-	"set background=light
 	set columns=132
 	set guioptions+=cmf
 	set guioptions-=T
 	set lines=43
+	"
+	" Set theme for GUI.
+	set background=light
+	colorscheme tempus_totus
 endif
 
 if has("patch-7.3.541")
