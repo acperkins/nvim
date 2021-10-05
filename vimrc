@@ -134,7 +134,7 @@ if has("eval")
 	endif
 	"
 	" Set theme for Terminal.
-	if &term =~# '^Linux'
+	if &term =~# '^linux'
 		" Dark for Linux console.
 		set background=dark
 		colorscheme tempus_night
