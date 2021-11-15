@@ -58,7 +58,7 @@ set cmdheight=1
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
-set formatoptions+=t
+set formatoptions-=t
 set hidden
 set history=1000
 set ignorecase
