@@ -46,8 +46,8 @@ nnoremap gb :bnext<CR>
 " for general text that will be viewed in a GUI. If printing, an A4-sized
 " page should fit 100 columns at 8pt or 80 columns at 10pt, in Courier or
 " Liberation Mono fonts.
-set colorcolumn=101  " Suggestions: 73, 81, 101
-set textwidth=100  " Suggestions: 72, 80, 100
+set colorcolumn=81  " Suggestions: 73, 81, 101
+set textwidth=80  " Suggestions: 72, 80, 100
 
 " All other settings.
 set autoindent
