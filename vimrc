@@ -118,7 +118,9 @@ if has('eval')
 	let g:org_tag_column=78
 	let g:tempus_enforce_background_color=1
 	" Set colour levels for different terminals.
-	if &term == 'xterm-256color'
+	if &term == 'builtin_gui'
+		set t_Co=256
+	elseif &term == 'xterm-256color'
 		set t_Co=256
 	elseif &term == 'xterm'
 		set t_Co=256
