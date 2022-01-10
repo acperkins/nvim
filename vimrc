@@ -151,6 +151,7 @@ endif
 " Settings based on feature detection.
 
 if has('autocmd')
+	autocmd BufRead,BufNewFile * set omnifunc=syntaxcomplete#Complete
 	autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
 	autocmd BufRead,BufNewFile *.html set et sw=2
 	autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
@@ -227,6 +228,23 @@ endif
 
 if has('wildmenu')
 	set wildmenu
+endif
+
+if has('nvim')
+	" Neovim config.
+	packadd! nvim-lspconfig
+lua << __EOF__
+	local servers = { 'clangd', 'gopls', 'rls' }
+	for _, lsp in ipairs(servers) do
+	require('lspconfig')[lsp].setup {
+		on_attach = on_attach,
+		flags = {
+			debounce_text_changes = 150,
+		}
+	}
+	end
+__EOF__
+	autocmd BufRead,BufNewFile * set omnifunc=v:lua.vim.lsp.omnifunc
 endif
 
 "=============================================================================

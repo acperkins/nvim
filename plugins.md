@@ -4,6 +4,7 @@ Git submodules are slow, so handle this manually.
 
 ## pack/acp/opt/
 
+* [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
 ## pack/acp/start/
