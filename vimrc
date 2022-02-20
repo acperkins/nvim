@@ -190,8 +190,8 @@ if has('gui_running')
 		set rop=type:directx
 	endif
 	set columns=132
-	set guioptions+=cmf
-	set guioptions-=T
+	set guioptions+=cm
+	set guioptions-=Tf
 	set lines=43
 	"
 	" Set theme for GUI.
