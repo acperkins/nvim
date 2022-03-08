@@ -250,6 +250,9 @@ __EOF__
 	autocmd BufRead,BufNewFile * set omnifunc=v:lua.vim.lsp.omnifunc
 endif
 
+" Keep this as the last config line in the file.
+runtime vimrc.local
+
 "=============================================================================
 " End of config file.
 " vim:set ft=vim:
