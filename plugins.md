@@ -16,3 +16,4 @@ Git submodules are slow, so handle this manually.
 * [tempus-themes-vim](https://gitlab.com/protesilaos/tempus-themes-vim)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
+* [vimwiki](https://github.com/vimwiki/vimwiki)
