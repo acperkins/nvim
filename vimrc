@@ -52,7 +52,7 @@ set textwidth=80  " Suggestions: 72, 80, 100
 " All other settings.
 set autoindent
 set autoread
-set background=dark
+set background=light
 set backspace=indent,eol,start
 set cmdheight=1
 set colorcolumn=73,81
@@ -143,8 +143,8 @@ if has('eval')
 		colorscheme tempus_night
 	else
 		" Light for all other consoles.
-		set background=light
-		colorscheme tempus_totus
+		set background=dark
+		colorscheme tempus_night
 	endif
 endif
 
