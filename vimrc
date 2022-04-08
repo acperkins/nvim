@@ -55,6 +55,7 @@ set autoread
 set background=dark
 set backspace=indent,eol,start
 set cmdheight=1
+set colorcolumn=73,81
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
@@ -160,21 +161,6 @@ if has('autocmd')
 	autocmd BufRead,BufNewFile *.xml set et sw=2
 	autocmd BufRead,BufNewFile *.yaml set et sw=2
 	autocmd BufRead,BufNewFile *.yml set et sw=2
-
-	" Set the colorcolumn to textwidth + 1.
-	function! s:SetColorColumn()
-		if &textwidth == 0
-			setlocal colorcolumn=81
-		else
-			setlocal colorcolumn=+1
-		endif
-	endfunction
-	augroup colorcolumn
-		autocmd!
-		autocmd OptionSet textwidth call s:SetColorColumn()
-		autocmd BufEnter * call s:SetColorColumn()
-	augroup end
-
 endif
 
 if has('folding')
