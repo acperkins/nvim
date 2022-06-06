@@ -17,12 +17,10 @@ syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}\>/
 
 " ISO time.
 syntax match prDate /\<T\d\{2}:\d\{2}\>/
-syntax match prDate /\<T\d\{2}:\d\{2}[+-]\d\{2}:\d\{2}\>/
 syntax match prDate /\<T\d\{2}:\d\{2}Z\>/
 
 " ISO date and time.
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}\>/
-syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}[+-]\d\{2}:\d\{2}\>/
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}Z\>/
 
 hi prName term=bold cterm=bold gui=bold
