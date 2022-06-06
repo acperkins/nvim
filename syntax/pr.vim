@@ -13,10 +13,7 @@ syntax match prWork /^\s*WORK:/
 syntax match prDone /^\s*DONE:/
 
 " ISO date.
-syntax match prDate /\<\d\{4}-\d\{2}\>/
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}\>/
-syntax match prDate /\<\d\{4}-W\d\{3}\>/
-syntax match prDate /\<\d\{4}-W\d\{3}-\d\>/
 
 " ISO time.
 syntax match prDate /\<T\d\{2}:\d\{2}\>/
