@@ -11,6 +11,7 @@ syntax match prName /^.\+\n-\+$/
 syntax match prTodo /^\s*TODO:/
 syntax match prWork /^\s*WORK:/
 syntax match prDone /^\s*DONE:/
+syntax region prUrl start="<.*:\/\/" end=">"
 
 " ISO date.
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}\>/
@@ -28,5 +29,6 @@ hi prTodo term=bold,underline cterm=bold,underline gui=bold,underline ctermfg=1 
 hi prWork term=bold,underline cterm=bold,underline gui=bold,underline ctermfg=2 guifg=#00ff00
 hi prDone term=bold,underline cterm=bold,underline gui=bold,underline ctermfg=7 guifg=#808080
 hi prDate term=bold cterm=bold gui=bold ctermfg=4 guifg=#0000ff
+hi prUrl ctermfg=4 guifg=#0000ff
 
 let b:current_syntax = 'pr'
