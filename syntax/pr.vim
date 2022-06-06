@@ -11,7 +11,22 @@ syntax match prName /^.\+\n-\+$/
 syntax match prTodo /^\s*TODO:/
 syntax match prWork /^\s*WORK:/
 syntax match prDone /^\s*DONE:/
+
+" ISO date.
+syntax match prDate /\<\d\{4}-\d\{2}\>/
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}\>/
+syntax match prDate /\<\d\{4}-W\d\{3}\>/
+syntax match prDate /\<\d\{4}-W\d\{3}-\d\>/
+
+" ISO time.
+syntax match prDate /\<T\d\{2}:\d\{2}\>/
+syntax match prDate /\<T\d\{2}:\d\{2}[+-]\d\{2}:\d\{2}\>/
+syntax match prDate /\<T\d\{2}:\d\{2}Z\>/
+
+" ISO date and time.
+syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}\>/
+syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}[+-]\d\{2}:\d\{2}\>/
+syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}Z\>/
 
 hi prName term=bold cterm=bold gui=bold
 hi prTodo term=bold,underline cterm=bold,underline gui=bold,underline ctermfg=1 guifg=#ff0000
