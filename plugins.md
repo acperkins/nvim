@@ -14,6 +14,7 @@ Git submodules are slow, so handle this manually.
 * [landscape.vim](https://github.com/itchyny/landscape.vim)
 * [limelight.vim](https://github.com/junegunn/limelight.vim)
 * [tempus-themes-vim](https://gitlab.com/protesilaos/tempus-themes-vim)
+* [vim-actodo](https://github.com/acperkins/vim-actodo)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [vimwiki](https://github.com/vimwiki/vimwiki)
