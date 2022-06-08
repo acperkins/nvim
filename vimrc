@@ -67,7 +67,7 @@ set incsearch
 set laststatus=2
 set linebreak
 set list
-set listchars=tab:╌╌│,lead:·,trail:·,extends:→,precedes:←,nbsp:␣
+set listchars=tab:│ ,lead:·,trail:·,extends:→,precedes:←,nbsp:␣
 set modelines=0
 set nobackup
 set noexpandtab
