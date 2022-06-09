@@ -6,8 +6,6 @@ if exists("b:current_syntax")
 endif
 
 syntax region prName start="^\s*#" end="$"
-syntax match prName /^.\+\n=\+$/
-syntax match prName /^.\+\n-\+$/
 syntax match prTodo /^\s*TODO:/
 syntax match prWork /^\s*WORK:/
 syntax match prDone /^\s*DONE:/
