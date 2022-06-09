@@ -67,7 +67,7 @@ set incsearch
 set laststatus=2
 set linebreak
 set list
-set listchars=tab:│ ,lead:·,trail:·,extends:→,precedes:←,nbsp:␣
+set listchars=tab:│ ,trail:·,extends:→,precedes:←,nbsp:␣
 set modelines=0
 set nobackup
 set noexpandtab
@@ -196,6 +196,10 @@ if has('patch-8.1.1564')
 	set signcolumn=number
 else
 	set signcolumn=yes
+endif
+
+if has("patch-8.2.2454")
+	set listchars+=lead:·
 endif
 
 if has('printer')
