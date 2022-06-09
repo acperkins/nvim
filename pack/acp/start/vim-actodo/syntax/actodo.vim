@@ -24,11 +24,11 @@ syntax match prDate /\<T\d\{2}:\d\{2}Z\>/
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}\>/
 syntax match prDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}Z\>/
 
-highlight link prName Title
-highlight link prTodo Exception
-highlight link prWork Conditional
-highlight link prDone Comment
-highlight link prDate Number
-highlight link prUrl String
+highlight prName term=bold,underline cterm=bold,underline gui=bold,underline
+highlight prTodo term=bold cterm=bold gui=bold ctermfg=1 guifg=#ff0000
+highlight prWork term=bold cterm=bold gui=bold ctermfg=2 guifg=#00ff00
+highlight prDone term=bold cterm=bold gui=bold ctermfg=7 guifg=#808080
+highlight prDate term=bold cterm=bold gui=bold ctermfg=4 guifg=#0000ff
+highlight prUrl ctermfg=4 guifg=#0000ff
 
 let b:current_syntax = 'actodo'
