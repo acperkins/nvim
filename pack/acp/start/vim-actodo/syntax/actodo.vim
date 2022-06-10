@@ -10,7 +10,7 @@ syntax match actodoTodo /^\s*TODO:/
 syntax match actodoWork /^\s*WORK:/
 syntax match actodoDone /^\s*DONE:/
 syntax region actodoUrl start="<.*:\/\/" end=">"
-syntax match actodoTicket /#\d\+#/
+syntax match actodoTicket /##\d\+##/
 
 " ISO date.
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\>/
