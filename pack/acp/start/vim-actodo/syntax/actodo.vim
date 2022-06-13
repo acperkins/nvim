@@ -12,7 +12,7 @@ syntax match actodoDone /^\s*DONE:/
 syntax region actodoUrl start="<.*:\/\/" end=">"
 syntax match actodoTicket /##\d\+##/
 syntax match actodoTicket /##\d\+## (open)/
-syntax match actodoTicket /##\d\+## (closed)/
+syntax match actodoDone /##\d\+## (closed)/
 
 " ISO date.
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\>/
@@ -44,7 +44,7 @@ syntax match actodoDate /\<Sun\>/
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
 highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=1 guifg=#ff0000
 highlight actodoWork term=bold cterm=bold gui=bold ctermfg=2 guifg=#00ff00
-highlight actodoDone term=bold cterm=bold gui=bold ctermfg=7 guifg=#808080
+highlight actodoDone term=bold cterm=bold gui=bold ctermfg=7 guifg=#c0c0c0
 highlight actodoDate term=bold cterm=bold gui=bold ctermfg=4 guifg=#0000ff
 highlight actodoUrl ctermfg=4 guifg=#0000ff
 highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=6 guifg=#008080
