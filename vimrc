@@ -193,9 +193,9 @@ if has('patch-7.3.541')
 endif
 
 if has('patch-8.1.0759')
-	set listchars+=tab:  │
+	set listchars+=tab:┆  
 else
-	set listchars+=tab:│ 
+	set listchars+=tab:┆ 
 endif
 
 if has('patch-8.1.1564')
