@@ -5,11 +5,11 @@ if exists("b:current_syntax")
 	finish
 endif
 
-syntax region actodoName start="^\s*#" end="$"
+syntax match actodoName /#\+\s\+.\+/
 syntax match actodoTodo /^\s*TODO:/
 syntax match actodoWork /^\s*WORK:/
 syntax match actodoDone /^\s*DONE:/
-syntax region actodoUrl start="<.*:\/\/" end=">"
+syntax match actodoUrl /<.*:\/\/.\+>/
 syntax match actodoTicket /##\d\+##/
 syntax match actodoTicket /##\d\+##/
 syntax match actodoDone /##\d\+:Closed##/
