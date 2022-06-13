@@ -42,11 +42,11 @@ syntax match actodoDate /\<Sat\>/
 syntax match actodoDate /\<Sun\>/
 
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
-highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=1 guifg=#ff0000
-highlight actodoWork term=bold cterm=bold gui=bold ctermfg=2 guifg=#00ff00
-highlight actodoDone term=bold cterm=bold gui=bold ctermfg=7 guifg=#c0c0c0
-highlight actodoDate term=bold cterm=bold gui=bold ctermfg=4 guifg=#0000ff
-highlight actodoUrl ctermfg=4 guifg=#0000ff
-highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=6 guifg=#008080
+highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=red guifg=red
+highlight actodoWork term=bold cterm=bold gui=bold ctermfg=green guifg=green
+highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
+highlight actodoDate term=bold cterm=bold gui=bold ctermfg=blue guifg=blue
+highlight actodoUrl ctermfg=blue guifg=blue
+highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=DarkCyan guifg=DarkCyan
 
 let b:current_syntax = 'actodo'
