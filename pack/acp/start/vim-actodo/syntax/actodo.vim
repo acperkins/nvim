@@ -23,6 +23,22 @@ syntax match actodoDate /\<T\d\{2}:\d\{2}Z\>/
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}\>/
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}Z\>/
 
+" Days of the week.
+syntax match actodoDate /\<Monday\>/
+syntax match actodoDate /\<Tuesday\>/
+syntax match actodoDate /\<Wednesday\>/
+syntax match actodoDate /\<Thursday\>/
+syntax match actodoDate /\<Friday\>/
+syntax match actodoDate /\<Saturday\>/
+syntax match actodoDate /\<Sunday\>/
+syntax match actodoDate /\<Mon\>/
+syntax match actodoDate /\<Tue\>/
+syntax match actodoDate /\<Wed\>/
+syntax match actodoDate /\<Thu\>/
+syntax match actodoDate /\<Fri\>/
+syntax match actodoDate /\<Sat\>/
+syntax match actodoDate /\<Sun\>/
+
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
 highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=1 guifg=#ff0000
 highlight actodoWork term=bold cterm=bold gui=bold ctermfg=2 guifg=#00ff00
