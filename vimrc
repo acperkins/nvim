@@ -163,8 +163,8 @@ if has('gui_running')
 	set lines=43
 	"
 	" Set theme for GUI.
-	set background=light
-	colorscheme tempus_totus
+	"set background=light
+	"colorscheme tempus_totus
 endif
 
 if has('patch-7.3.541')
