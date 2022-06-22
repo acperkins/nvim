@@ -44,9 +44,13 @@ syntax match actodoDate /\<Sun\>/
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
 highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=red guifg=red
 highlight actodoWork term=bold cterm=bold gui=bold ctermfg=green guifg=green
-highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
 highlight actodoDate term=bold cterm=bold gui=bold ctermfg=blue guifg=blue
 highlight actodoUrl ctermfg=blue guifg=blue
 highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=DarkCyan guifg=DarkCyan
+if &background ==# 'light'
+	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
+else
+	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=LightGray
+endif
 
 let b:current_syntax = 'actodo'
