@@ -52,7 +52,7 @@ set textwidth=80  " Suggestions: 72, 80, 100
 " All other settings.
 set autoindent
 set autoread
-set background=light
+set background=dark
 set backspace=indent,eol,start
 set cmdheight=1
 set colorcolumn=73,81
@@ -137,15 +137,7 @@ if has('eval')
 	endif
 	"
 	" Set theme for Terminal.
-	if &term == 'linux'
-		" Dark for Linux console.
-		set background=dark
-		colorscheme tempus_night
-	else
-		" Light for all other consoles.
-		set background=dark
-		colorscheme tempus_night
-	endif
+	colorscheme tempus_night
 endif
 
 "=============================================================================
@@ -244,6 +236,13 @@ lua << __EOF__
 	end
 __EOF__
 	autocmd BufRead,BufNewFile * set omnifunc=v:lua.vim.lsp.omnifunc
+endif
+
+" Customise colour schemes. Keep this near the end.
+if &background ==# 'light'
+	highlight SpecialKey ctermfg=lightgray ctermbg=NONE guifg=lightgray guibg=NONE
+else
+	highlight SpecialKey ctermfg=darkgray ctermbg=NONE guifg=darkgray guibg=NONE
 endif
 
 " Keep this as the last config line in the file.
