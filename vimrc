@@ -21,6 +21,10 @@ endif
 "=============================================================================
 " General settings for all builds.
 
+" Set colour levels for different terminals.
+set t_Co=256
+set termguicolors
+
 inoremap <C-BS> <C-W>
 inoremap <C-a> <C-O>^
 inoremap <C-e> <C-O>$
@@ -118,23 +122,6 @@ if has('eval')
 	let g:org_indent=0
 	let g:org_tag_column=78
 	let g:tempus_enforce_background_color=1
-	" Set colour levels for different terminals.
-	if &term == 'builtin_gui'
-		set t_Co=256
-	elseif &term == 'xterm-256color'
-		set t_Co=256
-	elseif &term == 'xterm'
-		set t_Co=256
-	elseif &term == 'rxvt-unicode'
-		set t_Co=256
-	else
-		set t_Co=16
-	endif
-	if &term =~# '256color' && ( &term =~# '^screen' || &term =~# '^tmux' )
-		let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum'
-		let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum'
-		set termguicolors
-	endif
 	"
 	" Set theme for Terminal.
 	colorscheme tempus_night
