@@ -50,7 +50,7 @@ highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=DarkCyan guifg=Dark
 if &background ==# 'light'
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
 else
-	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=LightGray
+	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=DarkGray
 endif
 
 let b:current_syntax = 'actodo'
