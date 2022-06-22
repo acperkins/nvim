@@ -231,6 +231,7 @@ if &background ==# 'light'
 else
 	highlight SpecialKey ctermfg=darkgray ctermbg=NONE guifg=darkgray guibg=NONE
 endif
+highlight ColorColumn ctermfg=NONE guifg=NONE
 
 " Keep this as the last config line in the file.
 runtime vimrc.local
