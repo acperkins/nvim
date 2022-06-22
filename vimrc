@@ -1,6 +1,7 @@
-" Anthony Perkins https://git.acperkins.com/acp/vimfiles
+" Anthony Perkins
+" https://github.com/acperkins/vimfiles
 "
-" Distributed under the VIM license.  See ':help license' for a copy. Files
+" Distributed under the VIM license. See ':help license' for a copy. Files
 " under pack/ and coc/extensions/node_modules/ have their own licenses.
 "
 " Includes parts from Tim Pope's «sensible.vim»

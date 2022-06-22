@@ -17,4 +17,3 @@ Git submodules are slow, so handle this manually.
 * [vim-actodo](https://github.com/acperkins/vim-actodo)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
 * [vim-surround](https://github.com/tpope/vim-surround)
-* [vimwiki](https://github.com/vimwiki/vimwiki)
