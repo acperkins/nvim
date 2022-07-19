@@ -15,15 +15,10 @@ syntax match actodoTicket /##\d\+##/
 syntax match actodoDone /##\d\+:Closed##/
 
 " ISO date.
-syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\>/
+syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\([T/]\S*\)\>/
 
 " ISO time.
-syntax match actodoDate /\<T\d\{2}:\d\{2}\>/
-syntax match actodoDate /\<T\d\{2}:\d\{2}Z\>/
-
-" ISO date and time.
-syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}\>/
-syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}T\d\{2}:\d\{2}Z\>/
+syntax match actodoDate /\<T\d\{2}:\d\{2}\([T/]\S*\)\>/
 
 " Days of the week.
 syntax match actodoDate /\<Monday\>/
