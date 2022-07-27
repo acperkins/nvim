@@ -36,6 +36,11 @@ syntax match actodoDate /\<Fri\>/
 syntax match actodoDate /\<Sat\>/
 syntax match actodoDate /\<Sun\>/
 
+" Importance.
+syntax match actodoImportant /\[!\]/
+syntax match actodoImportant /\[!!\]/
+syntax match actodoImportant /\[!!!\]/
+
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
 highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=red guifg=red
 highlight actodoWork term=bold cterm=bold gui=bold ctermfg=green guifg=green
@@ -44,10 +49,12 @@ if &background ==# 'light'
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
 	highlight actodoUrl ctermfg=blue guifg=blue
 	highlight actodoDate term=bold cterm=bold gui=bold ctermfg=blue guifg=blue
+	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=orange guifg=orange
 else
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=DarkGray
 	highlight actodoUrl ctermfg=cyan guifg=cyan
 	highlight actodoDate term=bold cterm=bold gui=bold ctermfg=cyan guifg=cyan
+	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=yellow guifg=yellow
 endif
 
 let b:current_syntax = 'actodo'
