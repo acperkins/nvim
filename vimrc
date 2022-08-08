@@ -78,6 +78,7 @@ set nojoinspaces
 set nomodeline
 set nowritebackup
 set nrformats-=octal
+set number
 set numberwidth=8
 set relativenumber
 set ruler
