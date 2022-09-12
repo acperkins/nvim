@@ -137,7 +137,7 @@ if has('autocmd')
 	autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
 	autocmd BufRead,BufNewFile *.opml set et sw=2
 	autocmd BufRead,BufNewFile *.rs set et sw=4
-	autocmd BufRead,BufNewFile *.txt set et nojs sw=3 tw=72
+	autocmd BufRead,BufNewFile *.txt set et sw=3 tw=72
 	autocmd BufRead,BufNewFile *.xml set et sw=2
 	autocmd BufRead,BufNewFile *.yaml set et sw=2
 	autocmd BufRead,BufNewFile *.yml set et sw=2
