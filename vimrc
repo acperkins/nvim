@@ -119,6 +119,7 @@ if has('eval')
 	let g:netrw_liststyle=3
 	let g:netrw_sort_sequence='[\/]$,*'
 	let g:netrw_winsize=-28
+	let g:nroff_is_groff=1
 	let g:org_indent=0
 	let g:org_tag_column=78
 	let g:tempus_enforce_background_color=1

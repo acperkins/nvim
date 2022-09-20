@@ -1,1 +1,1 @@
-autocmd BufRead,BufNewFile *.mom set filetype=mom
+autocmd BufRead,BufNewFile *.mom setfiletype mom
