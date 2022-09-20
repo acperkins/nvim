@@ -13,6 +13,7 @@ Git submodules are slow, so handle this manually.
 * [gruvbox](https://github.com/morhetz/gruvbox)
 * [landscape.vim](https://github.com/itchyny/landscape.vim)
 * [limelight.vim](https://github.com/junegunn/limelight.vim)
+* [mom.vim](http://git.savannah.gnu.org/cgit/groff.git/plain/contrib/mom/examples/mom.vim)
 * [tempus-themes-vim](https://gitlab.com/protesilaos/tempus-themes-vim)
 * [vim-actodo](https://github.com/acperkins/vim-actodo)
 * [vim-speeddating](https://github.com/tpope/vim-speeddating)
