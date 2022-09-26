@@ -13,6 +13,7 @@ syntax match actodoUrl /<.*:\/\/.\+>/
 syntax match actodoTicket /##\d\+##/
 syntax match actodoTicket /##\d\+##/
 syntax match actodoDone /##\d\+:Closed##/
+syntax match actodoTag /\v#\a(\w)+/
 
 " ISO date.
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\([T/]\S*\)*\>/
@@ -50,11 +51,13 @@ if &background ==# 'light'
 	highlight actodoUrl ctermfg=blue guifg=blue
 	highlight actodoDate term=bold cterm=bold gui=bold ctermfg=blue guifg=blue
 	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=orange guifg=orange
+	highlight actodoTag term=bold cterm=bold gui=bold ctermfg=orange guifg=orange
 else
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=DarkGray
 	highlight actodoUrl ctermfg=cyan guifg=cyan
 	highlight actodoDate term=bold cterm=bold gui=bold ctermfg=cyan guifg=cyan
 	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=yellow guifg=yellow
+	highlight actodoTag term=bold cterm=bold gui=bold ctermfg=yellow guifg=yellow
 endif
 
 let b:current_syntax = 'actodo'
