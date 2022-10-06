@@ -7,6 +7,7 @@ endif
 
 syntax match actodoName /#\+\s\+.\+/
 syntax match actodoTodo /^\s*TODO:/
+syntax match actodoWait /^\s*WAIT:/
 syntax match actodoWork /^\s*WORK:/
 syntax match actodoDone /^\s*DONE:/
 syntax match actodoUrl /<.*:\/\/.\+>/
@@ -44,6 +45,7 @@ syntax match actodoImportant /\[!!!\]/
 
 highlight actodoName term=bold,underline cterm=bold,underline gui=bold,underline
 highlight actodoTodo term=bold cterm=bold gui=bold ctermfg=red guifg=red
+highlight actodoWait term=bold cterm=bold gui=bold ctermfg=purple guifg=purple
 highlight actodoWork term=bold cterm=bold gui=bold ctermfg=green guifg=green
 highlight actodoTicket term=bold cterm=bold gui=bold ctermfg=DarkCyan guifg=DarkCyan
 if &background ==# 'light'
