@@ -62,6 +62,7 @@ set cmdheight=1
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
 set encoding=utf-8
+set expandtab
 set formatoptions-=t
 set hidden
 set history=1000
@@ -73,7 +74,6 @@ set list
 set listchars=trail:·,extends:→,precedes:←,nbsp:␣
 set modelines=0
 set nobackup
-set noexpandtab
 set nojoinspaces
 set nomodeline
 set nowritebackup
