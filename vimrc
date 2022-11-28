@@ -84,6 +84,7 @@ set relativenumber
 set ruler
 set scrolloff=2
 set sessionoptions-=options
+set shiftwidth=4
 set shortmess+=c
 set smartcase
 set smarttab
