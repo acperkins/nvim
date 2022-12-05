@@ -207,23 +207,6 @@ if has('wildmenu')
 	set wildmenu
 endif
 
-if has('nvim')
-	" Neovim config.
-	packadd! nvim-lspconfig
-lua << __EOF__
-	local servers = { 'clangd', 'gopls', 'rls' }
-	for _, lsp in ipairs(servers) do
-	require('lspconfig')[lsp].setup {
-		on_attach = on_attach,
-		flags = {
-			debounce_text_changes = 150,
-		}
-	}
-	end
-__EOF__
-	autocmd BufRead,BufNewFile * set omnifunc=v:lua.vim.lsp.omnifunc
-endif
-
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
 	highlight SpecialKey ctermfg=lightgray ctermbg=NONE
