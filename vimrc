@@ -1,8 +1,8 @@
 " Anthony Perkins
 " https://github.com/acperkins/vimfiles
 "
-" Distributed under the VIM license. See ':help license' for a copy. Files
-" under pack/ and coc/extensions/node_modules/ have their own licenses.
+" Distributed under the VIM license. See ':help license' for a copy. Files under
+" pack/ and coc/extensions/node_modules/ have their own licenses.
 "
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
@@ -14,8 +14,8 @@ set nocompatible
 "===============================================================================
 " Load Pathogen if Vim does not support packages.
 if !has('packages')
-	runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
-	execute pathogen#infect('pack/acp/start/{}')
+    runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
+    execute pathogen#infect('pack/acp/start/{}')
 endif
 
 "===============================================================================
@@ -100,120 +100,120 @@ set wrap
 " General settings for non-minimal Vim builds.
 
 if has('eval')
-	" Protect commands that are only available when +eval is enabled.
-	" Technically only 'if 1' would be required, as 'has()' is provided by
-	" +eval, but this is clearer.
-	command Q q
-	command W w
-	command WQ wq
-	command Wq wq
-	filetype plugin indent on
-	let g:ale_completion_enabled=1
-	let g:ale_sign_column_always=1
-	let g:go_def_mode='gopls'
-	let g:go_info_mode='gopls'
-	let g:go_version_warning=0
-	let g:goyo_width=100
-	let g:netrw_altv=1
-	let g:netrw_banner=0
-	let g:netrw_browse_split=4
-	let g:netrw_liststyle=3
-	let g:netrw_sort_sequence='[\/]$,*'
-	let g:netrw_winsize=-28
-	let g:nroff_is_groff=1
-	let g:org_indent=0
-	let g:org_tag_column=78
-	let g:tempus_enforce_background_color=1
-	"
-	" Set theme for Terminal.
-	colorscheme tempus_night
+    " Protect commands that are only available when +eval is enabled.
+    " Technically only 'if 1' would be required, as 'has()' is provided by
+    " +eval, but this is clearer.
+    command Q q
+    command W w
+    command WQ wq
+    command Wq wq
+    filetype plugin indent on
+    let g:ale_completion_enabled=1
+    let g:ale_sign_column_always=1
+    let g:go_def_mode='gopls'
+    let g:go_info_mode='gopls'
+    let g:go_version_warning=0
+    let g:goyo_width=100
+    let g:netrw_altv=1
+    let g:netrw_banner=0
+    let g:netrw_browse_split=4
+    let g:netrw_liststyle=3
+    let g:netrw_sort_sequence='[\/]$,*'
+    let g:netrw_winsize=-28
+    let g:nroff_is_groff=1
+    let g:org_indent=0
+    let g:org_tag_column=78
+    let g:tempus_enforce_background_color=1
+    "
+    " Set theme for Terminal.
+    colorscheme tempus_night
 endif
 
 "===============================================================================
 " Settings based on feature detection.
 
 if has('autocmd')
-	autocmd BufRead,BufNewFile * set omnifunc=syntaxcomplete#Complete
-	autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
-	autocmd BufRead,BufNewFile *.html set et sw=2
-	autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
-	autocmd BufRead,BufNewFile *.opml set et sw=2
-	autocmd BufRead,BufNewFile *.rs set et sw=4
-	autocmd BufRead,BufNewFile *.txt set et sw=3 tw=72
-	autocmd BufRead,BufNewFile *.xml set et sw=2
-	autocmd BufRead,BufNewFile *.yaml set et sw=2
-	autocmd BufRead,BufNewFile *.yml set et sw=2
+    autocmd BufRead,BufNewFile * set omnifunc=syntaxcomplete#Complete
+    autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
+    autocmd BufRead,BufNewFile *.html set et sw=2
+    autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
+    autocmd BufRead,BufNewFile *.opml set et sw=2
+    autocmd BufRead,BufNewFile *.rs set et sw=4
+    autocmd BufRead,BufNewFile *.txt set et sw=3 tw=72
+    autocmd BufRead,BufNewFile *.xml set et sw=2
+    autocmd BufRead,BufNewFile *.yaml set et sw=2
+    autocmd BufRead,BufNewFile *.yml set et sw=2
 endif
 
 if has('folding')
-	set nofoldenable
+    set nofoldenable
 endif
 
 if has('gui_running')
-	if has('gui_gtk')
-		set clipboard=unnamedplus
-		set guifont=Monospace\ 10
-	elseif has('gui_win32')
-		set clipboard=unnamed
-		set guifont=Iosevka_Fixed_Extended:h10:cANSI
-		set rop=type:directx
-	endif
-	set columns=132
-	set guioptions+=c
-	set guioptions+=m
-	set guioptions-=T
-	set guioptions-=f
-	set lines=43
+    if has('gui_gtk')
+        set clipboard=unnamedplus
+        set guifont=Monospace\ 10
+    elseif has('gui_win32')
+        set clipboard=unnamed
+        set guifont=Iosevka_Fixed_Extended:h10:cANSI
+        set rop=type:directx
+    endif
+    set columns=132
+    set guioptions+=c
+    set guioptions+=m
+    set guioptions-=T
+    set guioptions-=f
+    set lines=43
 endif
 
 if has('patch-7.3.541')
-	set formatoptions+=j
+    set formatoptions+=j
 endif
 
 if has('patch-8.1.0759')
-	set listchars+=tab:┆  
+    set listchars+=tab:┆  
 else
-	set listchars+=tab:┆ 
+    set listchars+=tab:┆ 
 endif
 
 if has('patch-8.1.1564')
-	set signcolumn=number
+    set signcolumn=number
 else
-	set signcolumn=yes
+    set signcolumn=yes
 endif
 
 if has('patch-8.2.2454')
-	set listchars+=lead:·
+    set listchars+=lead:·
 endif
 
 if has('printer')
-	set printheader=%t%h%m%=Page\ %N
-	set printoptions=paper:A4,number:y,syntax:n
+    set printheader=%t%h%m%=Page\ %N
+    set printoptions=paper:A4,number:y,syntax:n
 endif
 
 if has('smartindent')
-	set nosmartindent
+    set nosmartindent
 endif
 
 if has('syntax')
-	syntax on
+    syntax on
 endif
 
 if has('viminfo')
-	set viminfo="NONE"
+    set viminfo="NONE"
 endif
 
 if has('wildmenu')
-	set wildmenu
+    set wildmenu
 endif
 
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
-	highlight SpecialKey ctermfg=lightgray ctermbg=NONE
-				\ guifg=lightgray guibg=NONE
+    highlight SpecialKey ctermfg=lightgray ctermbg=NONE
+                         \ guifg=lightgray guibg=NONE
 else
-	highlight SpecialKey ctermfg=darkgray ctermbg=NONE
-				\ guifg=darkgray guibg=NONE
+    highlight SpecialKey ctermfg=darkgray ctermbg=NONE
+                         \ guifg=darkgray guibg=NONE
 endif
 highlight ColorColumn ctermfg=NONE guifg=NONE
 
