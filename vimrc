@@ -146,6 +146,12 @@ if has('autocmd')
 
     autocmd User GoyoEnter nested call <SID>goyo_enter()
     autocmd User GoyoLeave nested call <SID>goyo_leave()
+
+    augroup VCenterCursor
+        au!
+        au BufEnter,WinEnter,WinNew,VimResized *,*.*
+                    \ let &scrolloff=winheight(win_getid())/2
+    augroup END
 endif
 
 if has('folding')
