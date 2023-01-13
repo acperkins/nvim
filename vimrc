@@ -145,8 +145,8 @@ if has('autocmd')
     autocmd BufRead,BufNewFile *.yaml set et sw=2
     autocmd BufRead,BufNewFile *.yml set et sw=2
 
-    autocmd User GoyoEnter nested call <SID>goyo_enter()
-    autocmd User GoyoLeave nested call <SID>goyo_leave()
+    autocmd User GoyoEnter Limelight
+    autocmd User GoyoLeave Limelight!
 
     augroup VCenterCursor
         au!
@@ -216,14 +216,6 @@ endif
 if has('wildmenu')
     set wildmenu
 endif
-
-function! s:goyo_enter()
-    Limelight
-endfunction
-
-function! s:goyo_leave()
-    Limelight!
-endfunction
 
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
