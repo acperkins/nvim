@@ -148,11 +148,8 @@ if has('autocmd')
     autocmd User GoyoEnter Limelight
     autocmd User GoyoLeave Limelight!
 
-    augroup VCenterCursor
-        au!
-        au BufEnter,WinEnter,WinNew,VimResized *,*.*
-                    \ let &scrolloff=winheight(win_getid())/2
-    augroup END
+    autocmd BufEnter,WinEnter,WinNew,VimResized *
+                \ let &scrolloff=winheight(win_getid())/2
 endif
 
 if has('folding')
