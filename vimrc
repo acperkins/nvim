@@ -35,7 +35,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 
-nnoremap <F11> :Goyo<bar>:Limelight!!<CR>
+nnoremap <F11> :Goyo<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <down> <nop>
@@ -143,6 +143,9 @@ if has('autocmd')
     autocmd BufRead,BufNewFile *.xml set et sw=2
     autocmd BufRead,BufNewFile *.yaml set et sw=2
     autocmd BufRead,BufNewFile *.yml set et sw=2
+
+    autocmd User GoyoEnter nested call <SID>goyo_enter()
+    autocmd User GoyoLeave nested call <SID>goyo_leave()
 endif
 
 if has('folding')
@@ -206,6 +209,14 @@ endif
 if has('wildmenu')
     set wildmenu
 endif
+
+function! s:goyo_enter()
+    Limelight
+endfunction
+
+function! s:goyo_leave()
+    Limelight!
+endfunction
 
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
