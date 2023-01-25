@@ -147,9 +147,6 @@ if has('autocmd')
 
     autocmd User GoyoEnter Limelight
     autocmd User GoyoLeave Limelight!
-
-    autocmd BufEnter,WinEnter,WinNew,VimResized *
-                \ let &scrolloff=winheight(win_getid())/2
 endif
 
 if has('folding')
