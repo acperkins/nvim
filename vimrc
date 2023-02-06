@@ -35,7 +35,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 
-nnoremap <F11> :Goyo<CR>
+nnoremap <F11> :Limelight!!<CR>:set colorcolumn=0<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <down> <nop>
@@ -50,6 +50,11 @@ nnoremap gb :bnext<CR>
 " for general text that will be viewed in a GUI. If printing, an A4-sized page
 " should fit 100 columns at 8pt or 80 columns at 10pt, in Courier or Liberation
 " Mono fonts.
+"
+" You can highlight line-end columns with colorcolumn (cc), which should be one
+" larger than the textwidth. E.g. to include a 'margin-bell' line also:
+"     set tw=80 cc=73,81
+" Clear the colorcolumn highlighting with cc=0.
 set colorcolumn=73,81  " Suggestions: 73, 81, 101
 set textwidth=80  " Suggestions: 72, 80, 100
 
@@ -114,6 +119,7 @@ if has('eval')
     let g:go_info_mode='gopls'
     let g:go_version_warning=0
     let g:goyo_width=100
+    let g:limelight_default_coefficient=0.8
     let g:netrw_altv=1
     let g:netrw_banner=0
     let g:netrw_browse_split=4
