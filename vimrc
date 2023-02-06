@@ -35,7 +35,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 
-nnoremap <F11> :Limelight!!<CR>:set colorcolumn=0<CR>
+nnoremap <F11> :call ACPAuthorMode()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <down> <nop>
@@ -220,6 +220,12 @@ endif
 if has('wildmenu')
     set wildmenu
 endif
+
+function! ACPAuthorMode()
+    execute "set colorcolumn=" . (&colorcolumn == "" ? "73,81" : "")
+    execute "set textwidth=" . (&textwidth == "0" ? "80" : "0")
+    Limelight!!
+endfunction
 
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
