@@ -9,7 +9,6 @@ Git submodules are slow, so handle this manually.
 
 ## pack/acp/start/
 
-* [goyo.vim](https://github.com/junegunn/goyo.vim)
 * [gruvbox](https://github.com/morhetz/gruvbox)
 * [landscape.vim](https://github.com/itchyny/landscape.vim)
 * [limelight.vim](https://github.com/junegunn/limelight.vim)

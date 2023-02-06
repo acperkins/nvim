@@ -152,9 +152,6 @@ if has('autocmd')
     autocmd BufRead,BufNewFile *.xml set et sw=2
     autocmd BufRead,BufNewFile *.yaml set et sw=2
     autocmd BufRead,BufNewFile *.yml set et sw=2
-
-    autocmd User GoyoEnter Limelight
-    autocmd User GoyoLeave Limelight!
 endif
 
 if has('folding')
