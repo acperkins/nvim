@@ -170,6 +170,10 @@ if has('gui_running')
     set lines=43
 endif
 
+if has('mouse_sgr')
+    set ttymouse=sgr
+end
+
 if has('patch-7.3.541')
     set formatoptions+=j
 endif
