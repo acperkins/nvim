@@ -35,7 +35,8 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 
-nnoremap <F11> :call ACPAuthorMode()<CR>
+nnoremap <F10> :call ACPToggleMargins()<CR>
+nnoremap <F11> :Limelight!!<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <down> <nop>
@@ -55,7 +56,7 @@ nnoremap gb :bnext<CR>
 " larger than the textwidth. E.g. to include a 'margin-bell' line also:
 "     set tw=80 cc=73,81
 " Clear the colorcolumn highlighting with cc=0.
-set colorcolumn=73,81  " Suggestions: 73, 81, 101
+set colorcolumn=0
 set textwidth=80  " Suggestions: 72, 80, 100
 
 " All other settings.
@@ -222,10 +223,8 @@ if has('wildmenu')
     set wildmenu
 endif
 
-function! ACPAuthorMode()
-    execute "set colorcolumn=" . (&colorcolumn == "" ? "73,81" : "")
-    execute "set textwidth=" . (&textwidth == "0" ? "80" : "0")
-    Limelight!!
+function! ACPToggleMargins()
+    execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
 endfunction
 
 " Customise colour schemes. Keep this near the end.
