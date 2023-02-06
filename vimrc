@@ -159,7 +159,7 @@ if has('gui_running')
         set guifont=Monospace\ 10
     elseif has('gui_win32')
         set clipboard=unnamed
-        set guifont=Iosevka_Fixed_Extended:h10:cANSI
+        set guifont=Go_Mono:h10:cANSI
         set rop=type:directx
     endif
     set columns=132
