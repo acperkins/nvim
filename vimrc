@@ -63,6 +63,7 @@ set autoindent
 set autoread
 set background=dark
 set backspace=indent,eol,start
+set breakindent
 set cmdheight=1
 set directory=$TEMP//,/tmp//,.
 set display+=lastline
