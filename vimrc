@@ -82,6 +82,7 @@ set modelines=0
 set nobackup
 set nojoinspaces
 set nomodeline
+set nowrap
 set nowritebackup
 set nrformats-=octal
 set number
@@ -100,7 +101,6 @@ set ttimeout
 set ttimeoutlen=100
 set ttyfast
 set updatetime=300
-set wrap
 
 "===============================================================================
 " General settings for non-minimal Vim builds.
