@@ -39,6 +39,7 @@ nnoremap <F10> :call ACPToggleMargins()<CR>
 nnoremap <F11> :Limelight!!<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_gb<CR>
+nnoremap <S-F7> :setlocal spell! spelllang=en_us<CR>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
