@@ -29,6 +29,7 @@ inoremap <C-BS> <C-W>
 inoremap <C-a> <C-O>^
 inoremap <C-e> <C-O>$
 inoremap <F12> <C-\><C-O>:w<CR>
+inoremap <F2> #TODO:#<Space>
 inoremap <F9> <C-R>=strftime('%Y-%m-%dT%H:%M')<CR>
 inoremap <down> <nop>
 inoremap <left> <nop>
@@ -38,6 +39,7 @@ inoremap <up> <nop>
 nnoremap <F10> :call ACPToggleMargins()<CR>
 nnoremap <F11> :Limelight!!<CR>
 nnoremap <F12> :w<CR>
+nnoremap <F2> :call ACPNModeTodo()<CR>
 nnoremap <F7> :setlocal spell! spelllang=en_us<CR>
 nnoremap <S-F7> :setlocal spell! spelllang=en_gb<CR>
 nnoremap <down> <nop>
@@ -222,6 +224,24 @@ endif
 
 function! ACPToggleMargins()
     execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
+endfunction
+
+function! ACPNModeTodo()
+    " Toggles between TODO, WORK, WAIT, DONE, and blank.
+    " All are highlighted except DONE and blank.
+    " Must be at the start of the line, optionally preceeded with an
+    " asterisk and a space. This makes it work for Asciidoc lists.
+    if getline(line(".")) =~# "[#]TODO:[#] "
+        s/^\(\**\s*\)#TODO:# /\1#WORK:# /e
+    elseif getline(line(".")) =~# "[#]WORK:[#] "
+        s/^\(\**\s*\)#WORK:# /\1#WAIT:# /e
+    elseif getline(line(".")) =~# "[#]WAIT:[#] "
+        s/^\(\**\s*\)#WAIT:# /\1*DONE:* /e
+    elseif getline(line(".")) =~# "[*]DONE:[*] "
+        s/^\(\**\s*\)\*DONE:\* /\1/e
+    else
+        s/^\(\**\s*\)/\1#TODO:# /e
+    endif
 endfunction
 
 " Customise colour schemes. Keep this near the end.
