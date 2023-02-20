@@ -231,16 +231,16 @@ function! ACPNModeTodo()
     " All are highlighted except DONE and blank.
     " Must be at the start of the line, optionally preceeded with an
     " asterisk and a space. This makes it work for Asciidoc lists.
-    if getline(line(".")) =~# "[#]TODO:[#] "
-        s/^\(\**\s*\)#TODO:# /\1#WORK:# /e
-    elseif getline(line(".")) =~# "[#]WORK:[#] "
-        s/^\(\**\s*\)#WORK:# /\1#WAIT:# /e
-    elseif getline(line(".")) =~# "[#]WAIT:[#] "
-        s/^\(\**\s*\)#WAIT:# /\1*DONE:* /e
+    if getline(line(".")) =~# "[#][*]TODO:[*][#] "
+        s/^\(\**\s*\)#\*TODO:\*# /\1#*WORK:*# /e
+    elseif getline(line(".")) =~# "[#][*]WORK:[*][#] "
+        s/^\(\**\s*\)#\*WORK:\*# /\1#*WAIT:*# /e
+    elseif getline(line(".")) =~# "[#][*]WAIT:[*][#] "
+        s/^\(\**\s*\)#\*WAIT:\*# /\1*DONE:* /e
     elseif getline(line(".")) =~# "[*]DONE:[*] "
         s/^\(\**\s*\)\*DONE:\* /\1/e
     else
-        s/^\(\**\s*\)/\1#TODO:# /e
+        s/^\(\**\s*\)/\1#*TODO:*# /e
     endif
 endfunction
 
