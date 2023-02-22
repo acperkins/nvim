@@ -201,6 +201,10 @@ else
     set signcolumn=yes
 endif
 
+if has('patch-9.0.0640')
+    set smoothscroll
+endif
+
 if has('printer')
     set printheader=%t%h%m%=Page\ %N
     set printoptions=paper:A4,number:y,syntax:n
