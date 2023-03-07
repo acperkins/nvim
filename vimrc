@@ -40,8 +40,8 @@ nnoremap <C-h> g0
 nnoremap <C-j> gj
 nnoremap <C-k> gk
 nnoremap <C-l> g$
-nnoremap <F10> :call ACPToggleMargins()<CR>
-nnoremap <F11> :Limelight!!<CR>
+nnoremap <F10> :Limelight!!<CR>
+nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPNModeTodo()<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
