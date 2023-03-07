@@ -44,8 +44,8 @@ nnoremap <F10> :call ACPToggleMargins()<CR>
 nnoremap <F11> :Limelight!!<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPNModeTodo()<CR>
-nnoremap <F7> :setlocal spell! spelllang=en_us<CR>
-nnoremap <S-F7> :setlocal spell! spelllang=en_gb<CR>
+nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
+nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
@@ -232,6 +232,26 @@ endif
 
 function! ACPToggleMargins()
     execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
+endfunction
+
+function! ACPToggleSpellEnUs()
+    if &spell == 0
+        setlocal spell spelllang=en_us
+        echo "Spelling ON (en_US)"
+    else
+        setlocal nospell
+        echo "Spelling OFF"
+    endif
+endfunction
+
+function! ACPToggleSpellEnGb()
+    if &spell == 0
+        setlocal spell spelllang=en_gb
+        echo "Spelling ON (en_GB)"
+    else
+        setlocal nospell
+        echo "Spelling OFF"
+    endif
 endfunction
 
 function! ACPNModeTodo()
