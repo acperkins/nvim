@@ -230,6 +230,10 @@ if has('wildmenu')
     set wildmenu
 endif
 
+if has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
+    packadd coc.nvim
+endif
+
 function! ACPToggleMargins()
     execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
 endfunction
