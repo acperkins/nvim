@@ -98,7 +98,7 @@ set nrformats-=octal
 set numberwidth=8
 set relativenumber
 set ruler
-set scrolloff=2
+set scrolloff=5
 set sessionoptions-=options
 set shiftwidth=4
 set shortmess+=c
