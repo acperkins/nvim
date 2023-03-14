@@ -36,10 +36,6 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 
-nnoremap <C-h> g0
-nnoremap <C-j> gj
-nnoremap <C-k> gk
-nnoremap <C-l> g$
 nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
