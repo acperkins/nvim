@@ -49,6 +49,13 @@ nnoremap <up> <nop>
 nnoremap gB :bprevious<CR>
 nnoremap gb :bnext<CR>
 
+map <C-ScrollWheelDown> <C-F>
+map <C-ScrollWheelUp> <C-B>
+map <S-ScrollWheelDown> <C-E>
+map <S-ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> 3<C-E>
+map <ScrollWheelUp> 3<C-Y>
+
 " Text wrapping and margin settings. Setting tw=72 is ideal for emails or
 " anything that will be read in a Terminal, while tw=100 is better for code or
 " for general text that will be viewed in a GUI. If printing, an A4-sized page
