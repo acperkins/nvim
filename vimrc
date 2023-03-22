@@ -152,7 +152,7 @@ endif
 if has('autocmd')
     autocmd BufRead,BufNewFile * set omnifunc=syntaxcomplete#Complete
     autocmd BufRead,BufNewFile *.go set noet sw=8 ts=8
-    autocmd BufRead,BufNewFile *.html set et sw=2
+    autocmd BufRead,BufNewFile *.html set et sw=2 indk=
     autocmd BufRead,BufNewFile *.md set et ft=markdown sw=2
     autocmd BufRead,BufNewFile *.opml set et sw=2
     autocmd BufRead,BufNewFile *.ps1 set et sw=4
