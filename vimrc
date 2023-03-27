@@ -39,8 +39,9 @@ inoremap <up> <nop>
 nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
-nnoremap <F2> :call ACPNModeTodo()<CR>
+nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
+nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -261,7 +262,25 @@ function! ACPToggleSpellEnGb()
     endif
 endfunction
 
-function! ACPNModeTodo()
+function! ACPActodoTodo()
+    " Toggles between TODO, WORK, WAIT, DONE, and blank.
+    " All are highlighted except DONE and blank.
+    " Must be at the start of the line, optionally preceeded with
+    " whitespace. This makes it work for actodo lists.
+    if getline(line(".")) =~# "TODO: "
+        s/^\(\s*\)TODO: /\1WORK: /e
+    elseif getline(line(".")) =~# "WORK: "
+        s/^\(\s*\)WORK: /\1WAIT: /e
+    elseif getline(line(".")) =~# "WAIT: "
+        s/^\(\s*\)WAIT: /\1DONE: /e
+    elseif getline(line(".")) =~# "DONE: "
+        s/^\(\s*\)DONE: /\1/e
+    else
+        s/^\(\s*\)/\1TODO: /e
+    endif
+endfunction
+
+function! ACPAdocTodo()
     " Toggles between TODO, WORK, WAIT, DONE, and blank.
     " All are highlighted except DONE and blank.
     " Must be at the start of the line, optionally preceeded with an
