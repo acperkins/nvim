@@ -11,9 +11,8 @@ syntax match actodoWait /^\s*WAIT:/
 syntax match actodoWork /^\s*WORK:/
 syntax match actodoDone /^\s*DONE:/
 syntax match actodoUrl /<.*:\/\/.\+>/
-syntax match actodoTicket /##\d\+##/
-syntax match actodoTicket /##\d\+##/
-syntax match actodoDone /##\d\+:Closed##/
+syntax match actodoTicket /##\w\+##/
+syntax match actodoDone /##\w\+:Closed##/
 syntax match actodoTag /\v#\a(\w)+/
 
 " ISO date.
