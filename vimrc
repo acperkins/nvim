@@ -2,7 +2,7 @@
 " https://github.com/acperkins/vimfiles
 "
 " Distributed under the VIM license. See ':help license' for a copy. Files under
-" pack/ and coc/extensions/node_modules/ have their own licenses.
+" pack/ have their own licenses.
 "
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
