@@ -5,7 +5,7 @@ if exists("b:current_syntax")
 	finish
 endif
 
-syntax match actodoName /#\+\s\+.\+/
+syntax match actodoName /^#\+\s\+.\+/
 syntax match actodoTodo /^\s*TODO:/
 syntax match actodoWait /^\s*WAIT:/
 syntax match actodoWork /^\s*WORK:/
