@@ -1,0 +1,8 @@
+{
+    "clangd.arguments": [
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators",
+        "--suggest-missing-includes",
+        "--clang-tidy"
+    ]
+}

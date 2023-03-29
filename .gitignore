@@ -1,5 +1,4 @@
 .netrwhist
-coc-settings.json
 coc/commands
 coc/extensions/coc-clangd-data
 coc/extensions/db.json
