@@ -19,7 +19,7 @@ syntax match actodoTag /\v#\a(\w)+/
 syntax match actodoDate /\<\d\{4}-\d\{2}-\d\{2}\([T/]\S*\)*\>/
 
 " ISO time.
-syntax match actodoDate /\<T\d\{2}:\d\{2}\([T/]\S*\)*\>/
+syntax match actodoDate /\<T\d\{2}:\d\{2}\(\/\S*\)*\>/
 
 " Days of the week.
 syntax match actodoDate /\<Monday\>/
