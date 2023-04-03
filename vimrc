@@ -145,6 +145,67 @@ if has('eval')
     "
     " Set theme for Terminal.
     colorscheme tempus_night
+
+    function! ACPToggleMargins()
+        execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
+    endfunction
+
+    function! ACPToggleSpellEnUs()
+        if &spell == 0
+            setlocal spell spelllang=en_us
+            echo "Spelling ON (en_US)"
+        else
+            setlocal nospell
+            echo "Spelling OFF"
+        endif
+    endfunction
+
+    function! ACPToggleSpellEnGb()
+        if &spell == 0
+            setlocal spell spelllang=en_gb
+            echo "Spelling ON (en_GB)"
+        else
+            setlocal nospell
+            echo "Spelling OFF"
+        endif
+    endfunction
+
+    function! ACPActodoTodo()
+        " Toggles between TODO, WORK, WAIT, DONE, and blank.
+        " All are highlighted except DONE and blank.
+        " Must be at the start of the line, optionally preceeded with
+        " whitespace. This makes it work for actodo lists.
+        if getline(line(".")) =~# "TODO: "
+            s/^\(\s*\)TODO: /\1WORK: /e
+        elseif getline(line(".")) =~# "WORK: "
+            s/^\(\s*\)WORK: /\1WAIT: /e
+        elseif getline(line(".")) =~# "WAIT: "
+            s/^\(\s*\)WAIT: /\1DONE: /e
+        elseif getline(line(".")) =~# "DONE: "
+            s/^\(\s*\)DONE: /\1/e
+        else
+            s/^\(\s*\)/\1TODO: /e
+        endif
+    endfunction
+
+    function! ACPAdocTodo()
+        " Toggles between TODO, WORK, WAIT, DONE, and blank.
+        " All are highlighted except DONE and blank.
+        " Must be at the start of the line, optionally preceeded with an
+        " asterisk and a space. This makes it work for Asciidoc lists.
+        if getline(line(".")) =~# "[#][*]TODO:[*][#] "
+            s/^\(\**\s*\)#\*TODO:\*# /\1#*WORK:*# /e
+        elseif getline(line(".")) =~# "[#][*]WORK:[*][#] "
+            s/^\(\**\s*\)#\*WORK:\*# /\1#*WAIT:*# /e
+        elseif getline(line(".")) =~# "[#][*]WAIT:[*][#] "
+            s/^\(\**\s*\)#\*WAIT:\*# /\1*DONE:* /e
+        elseif getline(line(".")) =~# "[*]DONE:[*] "
+            s/^\(\**\s*\)\*DONE:\* /\1/e
+        else
+            s/^\(\**\s*\)/\1#*TODO:*# /e
+        endif
+    endfunction
+
 endif
 
 "===============================================================================
@@ -237,66 +298,6 @@ endif
 if has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
     packadd coc.nvim
 endif
-
-function! ACPToggleMargins()
-    execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
-endfunction
-
-function! ACPToggleSpellEnUs()
-    if &spell == 0
-        setlocal spell spelllang=en_us
-        echo "Spelling ON (en_US)"
-    else
-        setlocal nospell
-        echo "Spelling OFF"
-    endif
-endfunction
-
-function! ACPToggleSpellEnGb()
-    if &spell == 0
-        setlocal spell spelllang=en_gb
-        echo "Spelling ON (en_GB)"
-    else
-        setlocal nospell
-        echo "Spelling OFF"
-    endif
-endfunction
-
-function! ACPActodoTodo()
-    " Toggles between TODO, WORK, WAIT, DONE, and blank.
-    " All are highlighted except DONE and blank.
-    " Must be at the start of the line, optionally preceeded with
-    " whitespace. This makes it work for actodo lists.
-    if getline(line(".")) =~# "TODO: "
-        s/^\(\s*\)TODO: /\1WORK: /e
-    elseif getline(line(".")) =~# "WORK: "
-        s/^\(\s*\)WORK: /\1WAIT: /e
-    elseif getline(line(".")) =~# "WAIT: "
-        s/^\(\s*\)WAIT: /\1DONE: /e
-    elseif getline(line(".")) =~# "DONE: "
-        s/^\(\s*\)DONE: /\1/e
-    else
-        s/^\(\s*\)/\1TODO: /e
-    endif
-endfunction
-
-function! ACPAdocTodo()
-    " Toggles between TODO, WORK, WAIT, DONE, and blank.
-    " All are highlighted except DONE and blank.
-    " Must be at the start of the line, optionally preceeded with an
-    " asterisk and a space. This makes it work for Asciidoc lists.
-    if getline(line(".")) =~# "[#][*]TODO:[*][#] "
-        s/^\(\**\s*\)#\*TODO:\*# /\1#*WORK:*# /e
-    elseif getline(line(".")) =~# "[#][*]WORK:[*][#] "
-        s/^\(\**\s*\)#\*WORK:\*# /\1#*WAIT:*# /e
-    elseif getline(line(".")) =~# "[#][*]WAIT:[*][#] "
-        s/^\(\**\s*\)#\*WAIT:\*# /\1*DONE:* /e
-    elseif getline(line(".")) =~# "[*]DONE:[*] "
-        s/^\(\**\s*\)\*DONE:\* /\1/e
-    else
-        s/^\(\**\s*\)/\1#*TODO:*# /e
-    endif
-endfunction
 
 " Customise colour schemes. Keep this near the end.
 if &background ==# 'light'
