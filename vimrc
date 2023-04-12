@@ -259,9 +259,9 @@ if has('patch-7.3.541')
 endif
 
 if has('patch-8.1.0759')
-    set listchars+=tab:┆┄>
+    set listchars+=tab:┆  
 else
-    set listchars+=tab:┆┄
+    set listchars+=tab:┆ 
 endif
 
 if has('patch-8.1.1564')
@@ -298,16 +298,6 @@ endif
 if has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
     packadd coc.nvim
 endif
-
-" Customise colour schemes. Keep this near the end.
-if &background ==# 'light'
-    highlight SpecialKey ctermfg=lightgray ctermbg=NONE
-                         \ guifg=lightgray guibg=NONE
-else
-    highlight SpecialKey ctermfg=darkgray ctermbg=NONE
-                         \ guifg=darkgray guibg=NONE
-endif
-highlight ColorColumn ctermfg=NONE guifg=NONE
 
 " Keep this as the last config line in the file.
 runtime vimrc.local
