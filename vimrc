@@ -41,6 +41,7 @@ nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
+nnoremap <S-F11> :call ACPToggleWideMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
 nnoremap <down> <nop>
@@ -148,6 +149,10 @@ if has('eval')
 
     function! ACPToggleMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
+    endfunction
+
+    function! ACPToggleWideMargins()
+        execute "set colorcolumn=" . (&colorcolumn == "0" ? "121" : "0")
     endfunction
 
     function! ACPToggleSpellEnUs()
