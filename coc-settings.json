@@ -4,5 +4,6 @@
         "--header-insertion-decorators",
         "--suggest-missing-includes",
         "--clang-tidy"
-    ]
+    ],
+    "powershell.integratedConsole.showOnStartup": false
 }
