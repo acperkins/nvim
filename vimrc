@@ -182,14 +182,19 @@ if has('eval')
         " whitespace. This makes it work for actodo lists.
         if getline(line(".")) =~# "TODO: "
             s/^\(\s*\)TODO: /\1WORK: /e
+            echo " Blank  ->  TODO  -> [WORK] ->  WAIT  ->  DONE "
         elseif getline(line(".")) =~# "WORK: "
             s/^\(\s*\)WORK: /\1WAIT: /e
+            echo " Blank  ->  TODO  ->  WORK  -> [WAIT] ->  DONE "
         elseif getline(line(".")) =~# "WAIT: "
             s/^\(\s*\)WAIT: /\1DONE: /e
+            echo " Blank  ->  TODO  ->  WORK  ->  WAIT  -> [DONE]"
         elseif getline(line(".")) =~# "DONE: "
             s/^\(\s*\)DONE: /\1/e
+            echo "[Blank] ->  TODO  ->  WORK  ->  WAIT  ->  DONE "
         else
             s/^\(\s*\)/\1TODO: /e
+            echo " Blank  -> [TODO] ->  WORK  ->  WAIT  ->  DONE "
         endif
     endfunction
 
@@ -200,14 +205,19 @@ if has('eval')
         " asterisk and a space. This makes it work for Asciidoc lists.
         if getline(line(".")) =~# "[#][*]TODO:[*][#] "
             s/^\(\**\s*\)#\*TODO:\*# /\1#*WORK:*# /e
+            echo " Blank  ->  TODO  -> [WORK] ->  WAIT  ->  DONE "
         elseif getline(line(".")) =~# "[#][*]WORK:[*][#] "
             s/^\(\**\s*\)#\*WORK:\*# /\1#*WAIT:*# /e
+            echo " Blank  ->  TODO  ->  WORK  -> [WAIT] ->  DONE "
         elseif getline(line(".")) =~# "[#][*]WAIT:[*][#] "
             s/^\(\**\s*\)#\*WAIT:\*# /\1*DONE:* /e
+            echo " Blank  ->  TODO  ->  WORK  ->  WAIT  -> [DONE]"
         elseif getline(line(".")) =~# "[*]DONE:[*] "
             s/^\(\**\s*\)\*DONE:\* /\1/e
+            echo "[Blank] ->  TODO  ->  WORK  ->  WAIT  ->  DONE "
         else
             s/^\(\**\s*\)/\1#*TODO:*# /e
+            echo " Blank  -> [TODO] ->  WORK  ->  WAIT  ->  DONE "
         endif
     endfunction
 
