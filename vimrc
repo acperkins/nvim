@@ -41,9 +41,12 @@ nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPActodoTodo()<CR>
+nnoremap <F3> :Lexplore<CR>
+nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
 nnoremap <S-F11> :call ACPToggleWideMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
+nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -108,6 +111,8 @@ set shortmess+=c
 set smartcase
 set smarttab
 set spl=en_gb nospell
+set splitbelow
+set splitright
 set tabstop=8
 set ttimeout
 set ttimeoutlen=100
@@ -139,12 +144,12 @@ if has('eval')
     let g:netrw_browse_split=4
     let g:netrw_liststyle=3
     let g:netrw_sort_sequence='[\/]$,*'
-    let g:netrw_winsize=-28
+    let g:netrw_winsize=25
     let g:nroff_is_groff=1
     let g:org_indent=0
     let g:org_tag_column=78
     let g:tempus_enforce_background_color=1
-    "
+
     " Set theme for Terminal.
     colorscheme tempus_night
 
