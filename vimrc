@@ -29,8 +29,9 @@ inoremap <C-BS> <C-W>
 inoremap <C-a> <C-O>^
 inoremap <C-e> <C-O>$
 inoremap <F12> <C-\><C-O>:w<CR>
-inoremap <F2> #*TODO:*#<Space>
+inoremap <F2> TODO:<Space>
 inoremap <F9> <C-R>=strftime('%Y-%m-%dT%H:%M')<CR>
+inoremap <S-F2> #*TODO:*#<Space>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
@@ -149,10 +150,12 @@ if has('eval')
 
     function! ACPToggleMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
+        execute "set textwidth=" . (&textwidth == "0" ? "80" : "0")
     endfunction
 
     function! ACPToggleWideMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "121" : "0")
+        execute "set textwidth=" . (&textwidth == "0" ? "120" : "0")
     endfunction
 
     function! ACPToggleSpellEnUs()
