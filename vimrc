@@ -41,7 +41,6 @@ nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPActodoTodo()<CR>
-nnoremap <F3> :Lexplore<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
 nnoremap <S-F11> :call ACPToggleWideMargins()<CR>
@@ -140,19 +139,12 @@ if has('eval')
     let g:go_version_warning=0
     let g:goyo_width=100
     let g:limelight_default_coefficient=0.8
-    let g:netrw_alto=1
-    let g:netrw_altv=1
-    let g:netrw_banner=0
-    let g:netrw_browse_split=4
-    let g:netrw_liststyle=3
-    let g:netrw_mousemaps=0
-    let g:netrw_preview=1
-    let g:netrw_sort_sequence='[\/]$,*'
-    let g:netrw_winsize=-30
     let g:nroff_is_groff=1
     let g:org_indent=0
     let g:org_tag_column=78
     let g:tempus_enforce_background_color=1
+
+    let loaded_netrwPlugin=1  " Disable netrw completely.
 
     " Set theme for Terminal.
     colorscheme tempus_night
