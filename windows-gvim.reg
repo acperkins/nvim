@@ -20,4 +20,4 @@ Windows Registry Editor Version 5.00
 @="Open Vim here"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\gvim\command]
-@="\"C:\\vim\\vim90\\gvim.exe\" \"%1\""
+@="\"C:\\vim\\vim90\\gvim.exe\" -c \":NERDTree\""
