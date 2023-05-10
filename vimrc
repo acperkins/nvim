@@ -41,6 +41,7 @@ nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPActodoTodo()<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
 nnoremap <S-F11> :call ACPToggleWideMargins()<CR>
