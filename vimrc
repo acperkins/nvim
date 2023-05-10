@@ -127,6 +127,7 @@ if has('eval')
     " Protect commands that are only available when +eval is enabled.
     " Technically only 'if 1' would be required, as 'has()' is provided by
     " +eval, but this is clearer.
+
     command Q q
     command W w
     command WQ wq
@@ -139,12 +140,15 @@ if has('eval')
     let g:go_version_warning=0
     let g:goyo_width=100
     let g:limelight_default_coefficient=0.8
+    let g:netrw_alto=1
     let g:netrw_altv=1
     let g:netrw_banner=0
     let g:netrw_browse_split=4
     let g:netrw_liststyle=3
+    let g:netrw_mousemaps=0
+    let g:netrw_preview=1
     let g:netrw_sort_sequence='[\/]$,*'
-    let g:netrw_winsize=25
+    let g:netrw_winsize=-30
     let g:nroff_is_groff=1
     let g:org_indent=0
     let g:org_tag_column=78
