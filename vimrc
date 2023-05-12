@@ -44,7 +44,6 @@ nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
-nnoremap <S-F11> :call ACPToggleWideMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
@@ -151,13 +150,8 @@ if has('eval')
     colorscheme tempus_night
 
     function! ACPToggleMargins()
-        execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : "0")
-        execute "set textwidth=" . (&textwidth == "0" ? "80" : "0")
-    endfunction
-
-    function! ACPToggleWideMargins()
-        execute "set colorcolumn=" . (&colorcolumn == "0" ? "121" : "0")
-        execute "set textwidth=" . (&textwidth == "0" ? "120" : "0")
+        execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : (&colorcolumn == "73,81" ? "101" : "0"))
+        execute "set textwidth=" . (&colorcolumn == "101" ? "100" : "80")
     endfunction
 
     function! ACPToggleSpellEnUs()
