@@ -25,6 +25,16 @@ endif
 set t_Co=256
 set termguicolors
 
+" Disable arrow keys.
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
 inoremap <C-BS> <C-W>
 inoremap <C-a> <C-O>^
 inoremap <C-e> <C-O>$
@@ -32,10 +42,6 @@ inoremap <F12> <C-\><C-O>:w<CR>
 inoremap <F2> TODO:<Space>
 inoremap <F9> <C-R>=strftime('%Y-%m-%dT%H:%M')<CR>
 inoremap <S-F2> #*TODO:*#<Space>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
 
 nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
@@ -48,14 +54,10 @@ nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <up> <nop>
 
-nnoremap <leader>B :bprevious<CR>
-nnoremap <leader>b :bnext<CR>
-nnoremap <leader>d <Plug>(coc-definition)
+nnoremap <Leader>B :bprevious<CR>
+nnoremap <Leader>b :bnext<CR>
+nnoremap <Leader>d <Plug>(coc-definition)
 
 map <C-ScrollWheelDown> <C-F>
 map <C-ScrollWheelUp> <C-B>
