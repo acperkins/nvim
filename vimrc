@@ -44,6 +44,7 @@ nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
+nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
@@ -152,6 +153,7 @@ if has('eval')
     function! ACPToggleMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : (&colorcolumn == "73,81" ? "101" : "0"))
         execute "set textwidth=" . (&colorcolumn == "101" ? "100" : "80")
+        echo "tw=" . &textwidth . " & cc=" . &colorcolumn
     endfunction
 
     function! ACPToggleSpellEnUs()
