@@ -52,8 +52,9 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
-nnoremap gB :bprevious<CR>
-nnoremap gb :bnext<CR>
+
+nnoremap <leader>B :bprevious<CR>
+nnoremap <leader>b :bnext<CR>
 
 map <C-ScrollWheelDown> <C-F>
 map <C-ScrollWheelUp> <C-B>
