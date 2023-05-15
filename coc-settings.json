@@ -5,5 +5,6 @@
         "--suggest-missing-includes",
         "--clang-tidy"
     ],
+    "coc.preferences.jumpCommand": "vsplit",
     "powershell.integratedConsole.showOnStartup": false
 }

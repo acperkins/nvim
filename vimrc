@@ -55,6 +55,7 @@ nnoremap <up> <nop>
 
 nnoremap <leader>B :bprevious<CR>
 nnoremap <leader>b :bnext<CR>
+nnoremap <leader>d <Plug>(coc-definition)
 
 map <C-ScrollWheelDown> <C-F>
 map <C-ScrollWheelUp> <C-B>
