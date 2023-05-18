@@ -50,7 +50,7 @@ nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
-nnoremap <F9> :%!clang-format --style=file<CR>
+nnoremap <F9> :py3file /usr/share/clang/clang-format-*/clang-format.py<CR>
 nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
