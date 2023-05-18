@@ -55,7 +55,7 @@ nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
-nnoremap <S-F9> :%!clang-format --style=WebKit<CR>
+nnoremap <S-F9> :%!clang-format --style="{ BasedOnStyle: Microsoft, AccessModifierOffset: -4, PointerAlignment: Left }"<CR>
 
 nnoremap <Leader>B :bprevious<CR>
 nnoremap <Leader>b :bnext<CR>
