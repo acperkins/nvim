@@ -50,12 +50,12 @@ nnoremap <F2> :call ACPActodoTodo()<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
-nnoremap <F9> :%!clang-format --style=Microsoft<CR>
+nnoremap <F9> :%!clang-format --style=file<CR>
 nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
 nnoremap <S-F7> :call ACPToggleSpellEnGb()<CR>
-nnoremap <S-F9> :%!clang-format --style="{ BasedOnStyle: Microsoft, AccessModifierOffset: -4, PointerAlignment: Left }"<CR>
+nnoremap <S-F9> :%!clang-format --style=file<CR>
 
 nnoremap <Leader>B :bprevious<CR>
 nnoremap <Leader>b :bnext<CR>
