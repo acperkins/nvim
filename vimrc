@@ -79,7 +79,7 @@ map <ScrollWheelUp> 3<C-Y>
 "     set tw=80 cc=73,81
 " Clear the colorcolumn highlighting with cc=0.
 set colorcolumn=0
-set textwidth=80  " Suggestions: 72, 80, 100
+set textwidth=0  " Suggestions: 72, 80, 100
 
 " All other settings.
 set autoindent
@@ -158,7 +158,7 @@ if has('eval')
 
     function! ACPToggleMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : (&colorcolumn == "73,81" ? "101" : "0"))
-        execute "set textwidth=" . (&colorcolumn == "101" ? "100" : "80")
+        execute "set textwidth=" . (&colorcolumn == "73,81" ? "80" : (&colorcolumn == "101" ? "100" : "0"))
         echo "tw=" . &textwidth . " & cc=" . &colorcolumn
     endfunction
 
