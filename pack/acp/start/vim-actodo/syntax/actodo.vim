@@ -51,8 +51,8 @@ if &background ==# 'light'
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=LightGray guifg=LightGray
 	highlight actodoUrl ctermfg=blue guifg=blue
 	highlight actodoDate term=bold cterm=bold gui=bold ctermfg=blue guifg=blue
-	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=orange guifg=orange
-	highlight actodoTag term=bold cterm=bold gui=bold ctermfg=orange guifg=orange
+	highlight actodoImportant term=bold cterm=bold gui=bold ctermfg=LightRed guifg=LightRed
+	highlight actodoTag term=bold cterm=bold gui=bold ctermfg=LightRed guifg=LightRed
 else
 	highlight actodoDone term=bold cterm=bold gui=bold ctermfg=DarkGray guifg=DarkGray
 	highlight actodoUrl ctermfg=cyan guifg=cyan
