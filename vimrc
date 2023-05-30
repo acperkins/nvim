@@ -38,9 +38,11 @@ nnoremap <Up> <Nop>
 inoremap <C-BS> <C-W>
 inoremap <C-a> <C-O>^
 inoremap <C-e> <C-O>$
+inoremap <F11> <C-O>:call ACPToggleMargins()<CR>
 inoremap <F12> <C-\><C-O>:w<CR>
 inoremap <F2> TODO:<Space>
 inoremap <F9> <C-R>=strftime('%Y-%m-%dT%H:%M')<CR>
+inoremap <S-F11> <C-O>:call ACPToggleMargins()<CR>
 inoremap <S-F2> #*TODO:*#<Space>
 
 nnoremap <F10> :Limelight!!<CR>
