@@ -125,17 +125,12 @@ set ttyfast
 set updatetime=300
 set wrap
 
+" Set theme for Terminal.
+set background=dark
+colorscheme tempus_night
+
 "===============================================================================
 " General settings for non-minimal Vim builds.
-
-" Set theme for Terminal.
-if has('gui')
-    set background=light
-    colorscheme tempus_totus
-else
-    set background=dark
-    colorscheme tempus_night
-endif
 
 if has('eval')
     " Protect commands that are only available when +eval is enabled.
@@ -237,6 +232,12 @@ endif
 
 "===============================================================================
 " Settings based on feature detection.
+
+" Set theme for GUI.
+if has('gui')
+    set background=light
+    colorscheme tempus_totus
+endif
 
 if has('autocmd')
     autocmd BufRead,BufNewFile * set omnifunc=syntaxcomplete#Complete
