@@ -84,7 +84,6 @@ set textwidth=0  " Suggestions: 72, 80, 100
 " All other settings.
 set autoindent
 set autoread
-set background=dark
 set backspace=indent,eol,start
 set cmdheight=1
 set directory=$TEMP//,/tmp//,.
@@ -129,6 +128,15 @@ set wrap
 "===============================================================================
 " General settings for non-minimal Vim builds.
 
+" Set theme for Terminal.
+if has('gui')
+    set background=light
+    colorscheme tempus_totus
+else
+    set background=dark
+    colorscheme tempus_night
+endif
+
 if has('eval')
     " Protect commands that are only available when +eval is enabled.
     " Technically only 'if 1' would be required, as 'has()' is provided by
@@ -152,9 +160,6 @@ if has('eval')
     let g:tempus_enforce_background_color=1
 
     let loaded_netrwPlugin=1  " Disable netrw completely.
-
-    " Set theme for Terminal.
-    colorscheme tempus_night
 
     function! ACPToggleMargins()
         execute "set colorcolumn=" . (&colorcolumn == "0" ? "73,81" : (&colorcolumn == "73,81" ? "101" : "0"))
