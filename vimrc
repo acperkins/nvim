@@ -236,7 +236,7 @@ endif
 " Settings based on feature detection.
 
 " Set theme for GUI.
-if has('gui')
+if has('gui_running')
     set background=light
     colorscheme tempus_totus
 endif
