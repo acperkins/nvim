@@ -49,13 +49,11 @@ nnoremap <F10> :Limelight!!<CR>
 nnoremap <F11> :call ACPToggleMargins()<CR>
 nnoremap <F12> :w<CR>
 nnoremap <F2> :call ACPActodoTodo()<CR>
-nnoremap <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :vsplit<CR>
 nnoremap <F7> :call ACPToggleSpellEnUs()<CR>
 nnoremap <F9> :%!clang-format<CR>
 nnoremap <Leader>B :bprevious<CR>
 nnoremap <Leader>b :bnext<CR>
-nnoremap <Leader>d <Plug>(coc-definition)
 nnoremap <S-F11> :call ACPToggleMargins()<CR>
 nnoremap <S-F2> :call ACPAdocTodo()<CR>
 nnoremap <S-F4> :split<CR>
@@ -144,16 +142,8 @@ if has('eval')
     command WQ wq
     command Wq wq
     filetype plugin indent on
-    let g:ale_completion_enabled=1
-    let g:ale_sign_column_always=1
-    let g:go_def_mode='gopls'
-    let g:go_info_mode='gopls'
-    let g:go_version_warning=0
-    let g:goyo_width=100
     let g:limelight_default_coefficient=0.8
     let g:nroff_is_groff=1
-    let g:org_indent=0
-    let g:org_tag_column=78
     let g:tempus_enforce_background_color=1
 
     let loaded_netrwPlugin=1  " Disable netrw completely.
@@ -323,10 +313,6 @@ endif
 
 if has('wildmenu')
     set wildmenu
-endif
-
-if has("patch-8.1.1719") && (executable("nodejs") || executable("node"))
-    packadd coc.nvim
 endif
 
 " Keep this as the last config line in the file.
