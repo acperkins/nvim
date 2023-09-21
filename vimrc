@@ -227,8 +227,8 @@ endif
 
 " Set theme for GUI.
 if has('gui_running')
-    set background=light
-    colorscheme tempus_totus
+    set background=dark
+    colorscheme tempus_night
 endif
 
 if has('autocmd')
