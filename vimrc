@@ -126,7 +126,6 @@ set wrap
 
 " Set theme for Terminal.
 set background=dark
-colorscheme tempus_night
 
 "===============================================================================
 " General settings for non-minimal Vim builds.
@@ -144,6 +143,7 @@ if has('eval')
     let g:limelight_default_coefficient=0.8
     let g:nroff_is_groff=1
     let g:tempus_enforce_background_color=1
+    colorscheme tempus_night
 
     let loaded_netrwPlugin=1  " Disable netrw completely.
 
