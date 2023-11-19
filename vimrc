@@ -251,7 +251,7 @@ endif
 if has('gui_running')
     if has('gui_gtk')
         set clipboard=unnamedplus
-        set guifont=Monospace\ 10
+        set guifont=Berkeley\ Mono\ 10
     elseif has('gui_win32')
         set clipboard=unnamed
         set guifont=Cascadia_Mono_SemiLight:h10:W350:cANSI:qDRAFT
