@@ -1,22 +1,19 @@
 " Anthony Perkins
-" https://github.com/acperkins/vimfiles
-"
+" Config for NeoVIM.
+
 " Distributed under the VIM license. See ':help license' for a copy. Files under
 " pack/ have their own licenses.
-"
+
 " Includes parts from Tim Pope's «sensible.vim»
 " <https://github.com/tpope/vim-sensible>.
+
+" This should be gradually migrated to init.lua. Many settings in this file will
+" be redundant for NeoVIM because the defaults have changed, or the setting will
+" not apply.
 
 "===============================================================================
 " Set this first to avoid overwriting later settings.
 set nocompatible
-
-"===============================================================================
-" Load Pathogen if Vim does not support packages.
-if !has('packages')
-    runtime pack/acp/opt/vim-pathogen/autoload/pathogen.vim
-    execute pathogen#infect('pack/acp/start/{}')
-endif
 
 "===============================================================================
 " General settings for all builds.
