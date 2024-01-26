@@ -102,8 +102,6 @@ set nojoinspaces
 set nomodeline
 set nowritebackup
 set nrformats-=octal
-set number
-set numberwidth=8
 set ruler
 set scrolloff=5
 set sessionoptions-=options
