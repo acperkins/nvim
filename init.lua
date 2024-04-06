@@ -4,12 +4,14 @@ vim.opt.number = true
 vim.opt.numberwidth = 8
 
 local lspconfig = require('lspconfig')
+
 lspconfig.clangd.setup {}
 lspconfig.cmake.setup {}
 lspconfig.gopls.setup {}
 lspconfig.ltex.setup {}
 lspconfig.omnisharp.setup {}
 lspconfig.rls.setup {}
+lspconfig.rust_analyzer.setup {}
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
