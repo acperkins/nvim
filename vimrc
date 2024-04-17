@@ -130,10 +130,6 @@ if has('eval')
     " Technically only 'if 1' would be required, as 'has()' is provided by
     " +eval, but this is clearer.
 
-    command Q q
-    command W w
-    command WQ wq
-    command Wq wq
     filetype plugin indent on
     let g:limelight_default_coefficient=0.8
     let g:nroff_is_groff=1

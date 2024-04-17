@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\nvim]
+@="Edit with Nvim"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\nvim\command]
+@="\"C:\\nvim-win64\\bin\\nvim.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\nvim-R]
+@="Open with Nvim (read-only)"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\nvim-R\command]
+@="\"C:\\nvim-win64\\bin\\nvim.exe\" -R \"%1\""
