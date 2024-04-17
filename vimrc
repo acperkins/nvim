@@ -135,6 +135,7 @@ if has('eval')
     let g:nroff_is_groff=1
     let g:tempus_enforce_background_color=1
     colorscheme tempus_night
+    highlight Comment gui=NONE
 
     let loaded_netrwPlugin=1  " Disable netrw completely.
 
@@ -219,6 +220,7 @@ endif
 if has('gui_running')
     set background=dark
     colorscheme tempus_night
+    highlight Comment gui=NONE
 endif
 
 if has('autocmd')
