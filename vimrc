@@ -266,6 +266,10 @@ if has('mouse_sgr')
     set ttymouse=sgr
 end
 
+if has('nvim')
+    set mouse=nv
+end
+
 if has('patch-7.3.541')
     set formatoptions+=j
 endif
